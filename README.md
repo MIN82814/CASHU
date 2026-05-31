@@ -49,7 +49,7 @@
 
 ## HTML｜SCSS｜Bootstrap 5｜Git / GitHub（Gitflow、PR協作）｜SVG
 
-## 旻旻前端技術實作負責項目
+## 💡旻旻前端技術實作負責項目
 
 ### 1. 核心業務模組開發：精密佈局與 SVG 效能優化
 
@@ -68,7 +68,7 @@
 
 ---
 
-## 📁 資料夾結構
+## 🗂️ 資料夾結構
 
 ```text
 CASHU/
@@ -109,7 +109,7 @@ CASHU/
 
 ---
 
-## 快速開始 (Getting Started)
+## 🖥️快速開始 (Getting Started)
 
 ### 環境要求
 
@@ -140,7 +140,6 @@ CASHU/
 ## 🚀 部署自動化 (CI/CD Workflow)
 
 專案已配置基於 `gh-pages` 的自動化部署流水線，大幅簡化發布流程。
-
 當代碼修改完成並推送到 GitHub 遠端倉庫後，僅需在終端機執行一行指令：
 
 ```bash
