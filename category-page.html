@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <title>支出類別-CASHU</title>
+    <script type="module" crossorigin src="/CASHU/assets/main-DKZf0DiU.js"></script>
+    <link rel="stylesheet" crossorigin href="/CASHU/assets/main-COe7y4l1.css">
+  </head>
+
+  <body>
+    <div
+      class="mobile-frame bg-white position-relative"
+      style="min-height: 100vh"
+    >
+      <img
+  src="/CASHU/assets/Status%20bar-C_-zPuPq.svg"
+  alt="statusbar"
+  class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+  style="background-color: rgba(255, 255, 255, 0.625)"
+/>
+      <div
+        class="container-fluid"
+        style="padding-bottom: 34px; padding-top: 50px"
+      >
+        <main class="category-page">
+          <div class="py-4 d-flex justify-content-between align-items-center">
+            <a href="log-add.html"
+              ><i data-lucide="chevron-left" class="icon-40 p-3"></i
+            ></a>
+            <span class="h2">選擇類別</span>
+            <i
+              data-lucide="chevron-right"
+              class="icon-40 p-3 icon-transparent"
+            ></i>
+          </div>
+          <div
+            class="accordion accordion-flush mb-4"
+            id="accordionFlushExample"
+          >
+            <!--食物-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button body-2"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#food"
+                  aria-expanded="true"
+                  aria-controls="food"
+                >
+                  飲食
+                  <span class="accordion-icon ms-auto">
+                    <i data-lucide="chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="food"
+                class="accordion-collapse collapse show"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul class="list-group mt-2 rounded-0">
+                    <li
+                      class="list-group-item list-group-item-action mb-2 active"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.7279%206.7047C21.9074%207.13801%2021.9998%207.60243%2021.9998%208.07143C22.0009%208.62607%2021.8724%209.17328%2021.6242%209.66937C21.3762%2010.1655%2021.0156%2010.5967%2020.5712%2010.9286V18.0714C20.5712%2018.4503%2020.4206%2018.8137%2020.1528%2019.0816C19.8849%2019.3494%2019.5215%2019.5%2019.1426%2019.5H9.85693V4.5H18.4284C18.8974%204.5%2019.3618%204.59237%2019.7951%204.77186C20.2284%204.95134%2020.6221%205.21441%2020.9538%205.54604C21.2854%205.87769%2021.5485%206.2714%2021.7279%206.7047Z'%20fill='%23FF840A'/%3e%3cpath%20d='M15.5714%208.07143C15.5714%207.60243%2015.4791%207.13801%2015.2996%206.7047C15.1201%206.2714%2014.857%205.87769%2014.5254%205.54604C14.1937%205.21441%2013.8%204.95134%2013.3667%204.77186C12.9334%204.59237%2012.469%204.5%2012%204.5H5.57143C4.82184%204.5%204.09127%204.73584%203.48317%205.17413C2.87509%205.61243%202.42031%206.23093%202.18327%206.94204C1.94624%207.65316%201.93895%208.42083%202.16245%209.13631C2.38595%209.8518%202.82891%2010.4788%203.42857%2010.9286V18.0714C3.42857%2018.4503%203.57908%2018.8137%203.84698%2019.0816C4.1149%2019.3494%204.47826%2019.5%204.85714%2019.5H12.7143C13.0932%2019.5%2013.4565%2019.3494%2013.7244%2019.0816C13.9923%2018.8137%2014.1429%2018.4503%2014.1429%2018.0714V10.9286C14.5872%2010.5967%2014.9479%2010.1655%2015.1959%209.66937C15.4439%209.17328%2015.5725%208.62607%2015.5714%208.07143Z'%20fill='%23FFC56D'/%3e%3c/svg%3e"
+                            alt="早餐icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>早餐</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.2145%2021.2143C9.96749%2021.2143%208.29735%2021.1749%207.10249%2021.1277C5.38907%2021.06%203.64307%2019.8232%203.64307%2017.8929V17.8569C3.65164%2017.1184%204.03435%2016.5454%204.54564%2016.179C5.04535%2015.8203%205.68049%2015.6429%206.29421%2015.6429H18.1348C18.7485%2015.6429%2019.3832%2015.8199%2019.8834%2016.1786C20.3946%2016.5459%2020.7774%2017.1184%2020.7855%2017.8569L20.7859%2017.8929C20.7859%2019.8232%2019.0399%2021.06%2017.3265%2021.1277C16.1316%2021.1749%2014.4615%2021.2143%2012.2145%2021.2143Z'%20fill='%23FFC56D'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5.91919%2017.6597C5.30847%2017.2526%204.33262%2017.3623%203.70133%2017.4969C3.3109%2017.5805%202.87119%2017.541%202.65733%2017.2037C2.38904%2016.7795%202.25576%2016.2103%202.19319%2015.6725C2.0749%2014.6533%202.64319%2013.6312%203.64047%2013.3899C4.70847%2013.1319%205.78633%2013.353%206.83762%2014.0546C7.79976%2014.6962%208.70533%2014.6962%209.66704%2014.0546C11.2035%2013.0295%2012.7965%2013.0295%2014.3333%2014.0546C15.295%2014.6962%2016.2006%2014.6962%2017.1623%2014.0546C18.2136%2013.353%2019.2915%2013.1319%2020.3595%2013.3903C21.3568%2013.6312%2021.9255%2014.6533%2021.8068%2015.6725C21.7442%2016.2103%2021.6109%2016.7799%2021.3426%2017.2033C21.1292%2017.541%2020.6895%2017.5805%2020.2986%2017.4969C19.6678%2017.3623%2018.6915%2017.2526%2018.0812%2017.6597C16.5443%2018.6849%2014.9513%2018.6849%2013.4145%2017.6597C12.4528%2017.0182%2011.5472%2017.0182%2010.5859%2017.6597C9.04862%2018.6849%207.45604%2018.6849%205.91919%2017.6597Z'%20fill='%23FF840A'/%3e%3cpath%20d='M21.3857%2011.7111C21.2815%2010.8857%2020.5243%2010.4546%2019.6928%2010.4151C18.4328%2010.3551%2016.0894%2010.2857%2012%2010.2857C7.74554%2010.2857%205.38111%2010.3607%204.15969%2010.422C3.41911%2010.4593%202.7424%2010.8261%202.63097%2011.5594C2.58952%2011.8473%202.56961%2012.1378%202.5714%2012.4286C2.5714%2012.7714%202.59497%2013.0586%202.6314%2013.2977C2.74283%2014.0306%203.41911%2014.3979%204.15969%2014.4351C5.38111%2014.4964%207.74554%2014.5714%2012%2014.5714C16.0894%2014.5714%2018.4328%2014.502%2019.6928%2014.442C20.5243%2014.4026%2021.2811%2013.9714%2021.3857%2013.146C21.4123%2012.9386%2021.4285%2012.7003%2021.4285%2012.4286C21.4285%2012.1569%2021.4123%2011.9186%2021.3857%2011.7111Z'%20fill='%23CC4C02'/%3e%3cpath%20d='M12.2145%202.78572C11.0929%202.78572%2010.1136%202.80415%209.26507%202.83415C6.15407%202.94344%203.64307%205.35972%203.64307%208.51786C3.64307%209.25801%203.72621%209.89701%203.81707%2010.3761C3.97478%2011.2059%204.63564%2011.7947%205.44907%2011.9019C6.49478%2012.0403%208.53907%2012.2143%2012.2145%2012.2143C15.8899%2012.2143%2017.9342%2012.0403%2018.9799%2011.9023C19.7929%2011.7947%2020.4542%2011.2059%2020.6119%2010.3761C20.7028%209.89701%2020.7859%209.25758%2020.7859%208.51786C20.7859%205.35972%2018.2745%202.94344%2015.1639%202.83415C14.3154%202.80415%2013.3361%202.78572%2012.2145%202.78572Z'%20fill='%23FFC56D'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M17.5716%207.50001C17.4011%207.50001%2017.2376%207.56774%2017.117%207.68829C16.9964%207.80885%2016.9287%207.97237%2016.9287%208.14286C16.9287%208.31336%2016.9964%208.47687%2017.117%208.59743C17.2376%208.71799%2017.4011%208.78572%2017.5716%208.78572H17.7859C17.9564%208.78572%2018.1199%208.71799%2018.2404%208.59743C18.361%208.47687%2018.4287%208.31336%2018.4287%208.14286C18.4287%207.97237%2018.361%207.80885%2018.2404%207.68829C18.1199%207.56774%2017.9564%207.50001%2017.7859%207.50001H17.5716ZM14.3573%206.42858C14.3573%206.25808%2014.425%206.09457%2014.5456%205.97401C14.6661%205.85345%2014.8296%205.78572%2015.0001%205.78572H15.2144C15.3849%205.78572%2015.5484%205.85345%2015.669%205.97401C15.7896%206.09457%2015.8573%206.25808%2015.8573%206.42858C15.8573%206.59907%2015.7896%206.76259%2015.669%206.88315C15.5484%207.00371%2015.3849%207.07143%2015.2144%207.07143H15.0001C14.8296%207.07143%2014.6661%207.00371%2014.5456%206.88315C14.425%206.76259%2014.3573%206.59907%2014.3573%206.42858ZM14.7859%208.78572C14.9564%208.78572%2015.1199%208.85345%2015.2404%208.97401C15.361%209.09457%2015.4287%209.25808%2015.4287%209.42858C15.4287%209.59907%2015.361%209.76259%2015.2404%209.88315C15.1199%2010.0037%2014.9564%2010.0714%2014.7859%2010.0714H14.5716C14.4011%2010.0714%2014.2376%2010.0037%2014.117%209.88315C13.9964%209.76259%2013.9287%209.59907%2013.9287%209.42858C13.9287%209.25808%2013.9964%209.09457%2014.117%208.97401C14.2376%208.85345%2014.4011%208.78572%2014.5716%208.78572H14.7859Z'%20fill='%23FF840A'/%3e%3c/svg%3e"
+                            alt="午餐icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>午餐</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.26627%2012.4518C8.97505%2012.1606%208.49212%2012.2005%208.25263%2012.5355L5.08115%2016.9722C5.00827%2017.0741%204.82118%2017.118%204.63179%2017.0246C4.38837%2016.9045%204.11444%2016.8372%203.82542%2016.8372C2.81727%2016.8372%202%2017.6545%202%2018.6628C2%2019.4808%202.53776%2020.1726%203.27845%2020.405C3.42522%2020.451%203.5483%2020.5741%203.59431%2020.7209C3.82652%2021.4619%204.51836%2022%205.33645%2022C6.3446%2022%207.16185%2021.1826%207.16185%2020.1744C7.16185%2019.8862%207.09493%2019.613%206.9756%2019.3702C6.88268%2019.181%206.92654%2018.9944%207.02827%2018.9216L11.4644%2015.7473C11.7992%2015.5077%2011.839%2015.0248%2011.5479%2014.7337L9.26627%2012.4518Z'%20fill='%23FFC56D'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M15.1339%202.00428C16.8725%202.07089%2018.4813%202.91052%2019.7855%204.21489C21.0898%205.51928%2021.9293%207.12825%2021.9959%208.86705C22.0629%2010.6181%2021.3422%2012.4003%2019.7168%2014.0258C18.1062%2015.6366%2015.8671%2016.8373%2013.698%2017.3209C11.5538%2017.799%209.29532%2017.6078%207.8447%2016.1569C6.39404%2014.7061%206.20282%2012.4475%206.68086%2010.303C7.16441%208.13372%208.36501%205.89438%209.97556%204.28364C11.601%202.65806%2013.383%201.93721%2015.1339%202.00428Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M17.0096%2013.3604C17.27%2013.1%2017.27%2012.6779%2017.0096%2012.4175C16.7493%2012.1572%2016.3272%2012.1572%2016.0669%2012.4175C15.423%2013.0615%2014.561%2013.5874%2013.6744%2013.8983C12.7794%2014.2121%2011.9279%2014.2838%2011.2879%2014.1088C10.9328%2014.0117%2010.5662%2014.2209%2010.4691%2014.5761C10.372%2014.9312%2010.5812%2015.2978%2010.9363%2015.3949C11.9227%2015.6646%2013.0641%2015.5252%2014.1155%2015.1565C15.1752%2014.7849%2016.2131%2014.1569%2017.0096%2013.3604Z'%20fill='%23FFC56D'/%3e%3c/svg%3e"
+                            alt="晚餐icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>晚餐</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M14.4434%205.33333C14.4434%203.50977%2013.0736%201.99999%2011.11%201.99999C10.9332%201.99999%2010.7636%202.07023%2010.6386%202.19525C10.5136%202.32028%2010.4434%202.48985%2010.4434%202.66666C10.4434%202.84347%2010.5136%203.01304%2010.6386%203.13806C10.7636%203.26309%2010.9332%203.33333%2011.11%203.33333C12.3025%203.33333%2013.11%204.2111%2013.11%205.33333C13.11%205.51014%2013.1803%205.67971%2013.3053%205.80473C13.4303%205.92975%2013.5999%205.99999%2013.7767%205.99999C13.9535%205.99999%2014.1231%205.92975%2014.2481%205.80473C14.3731%205.67971%2014.4434%205.51014%2014.4434%205.33333Z'%20fill='%23FF840A'/%3e%3cpath%20d='M19.2285%206.33999C18.9669%206.08011%2018.6471%205.88633%2018.2957%205.77472C17.9442%205.66311%2017.5712%205.63688%2017.2076%205.69821C15.4659%205.98621%2012.4814%206.95466%209.62586%208.18488C8.19164%208.80266%206.77252%209.49466%205.54275%2010.2115C4.3223%2010.9227%203.24941%2011.6813%202.5383%2012.4427C2.14186%2012.8675%201.99786%2013.412%202.00052%2013.9071C2.01608%2016.8871%202.15252%2018.7395%202.27252%2019.8075C2.38897%2020.8409%203.20141%2021.5915%204.20719%2021.6902C5.56586%2021.8227%208.10675%2022%2011.9939%2022C15.8827%2022%2018.429%2021.8222%2019.7899%2021.6898C20.7961%2021.592%2021.609%2020.8409%2021.7254%2019.8067C21.8534%2018.6715%2021.9992%2016.6511%2021.9992%2013.3333C21.9992%209.61866%2020.2436%207.34221%2019.2285%206.33999Z'%20fill='%23FFC56D'/%3e%3cpath%20d='M21.9988%2013.3333H2.06678C2.02012%2013.5258%202.00012%2013.72%202.001%2013.9071C2.01656%2016.8871%202.153%2018.7395%202.273%2019.8075C2.38945%2020.8409%203.20189%2021.5915%204.20767%2021.6902C5.56634%2021.8227%208.10723%2022%2011.9943%2022C15.8832%2022%2018.4294%2021.8222%2019.7903%2021.6898C20.7966%2021.592%2021.6095%2020.8409%2021.7259%2019.8067C21.8539%2018.672%2021.9997%2016.6511%2021.9997%2013.3333H21.9988Z'%20fill='%23FF840A'/%3e%3cpath%20d='M16.4432%207.55555C16.4432%207.90574%2016.3742%208.2525%2016.2402%208.57604C16.1062%208.89957%2015.9098%209.19354%2015.6621%209.44117C15.4145%209.68879%2015.1206%209.88521%2014.797%2010.0192C14.4735%2010.1532%2014.1267%2010.2222%2013.7765%2010.2222C13.4263%2010.2222%2013.0796%2010.1532%2012.756%2010.0192C12.4325%209.88521%2012.1385%209.68879%2011.8909%209.44117C11.6433%209.19354%2011.4469%208.89957%2011.3129%208.57604C11.1788%208.2525%2011.1099%207.90574%2011.1099%207.55555C11.1099%206.8483%2011.3908%206.17003%2011.8909%205.66993C12.391%205.16983%2013.0693%204.88888%2013.7765%204.88888C14.4838%204.88888%2015.1621%205.16983%2015.6621%205.66993C16.1622%206.17003%2016.4432%206.8483%2016.4432%207.55555Z'%20fill='%23FF840A'/%3e%3cpath%20d='M21.933%2016.8889H2.06543C2.08587%2017.3844%202.10987%2017.8275%202.13565%2018.2222H21.8628C21.8885%2017.8275%2021.9125%2017.3844%2021.933%2016.8889Z'%20fill='%23FFC56D'/%3e%3c/svg%3e"
+                            alt="點心icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>點心</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M15.7468%202.05068C16.0187%202.13731%2016.2451%202.32838%2016.3761%202.58187C16.5072%202.83536%2016.5322%203.13052%2016.4457%203.40245L15.5388%206.25235C15.4959%206.38709%2015.4269%206.51207%2015.3357%206.62015C15.2446%206.72822%2015.133%206.81728%2015.0074%206.88224C14.7538%207.01344%2014.4584%207.0385%2014.1863%206.95192C14.0515%206.90904%2013.9266%206.84005%2013.8185%206.74888C13.7104%206.65771%2013.6214%206.54615%2013.5564%206.42056C13.4252%206.16692%2013.4001%205.87155%2013.4867%205.59943L14.3951%202.74952C14.4817%202.47763%2014.6728%202.25127%2014.9263%202.12022C15.1798%201.98917%2015.4749%201.96416%2015.7468%202.05068Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.9985%204.41124C10.4106%204.41162%208.88783%205.04269%207.76513%206.16566C6.64242%207.28864%206.01172%208.81156%206.01172%2010.3995V11.1012C6.01172%2011.1256%206.01172%2011.1514%206.01459%2011.1773L6.62016%2019.6667C6.66517%2020.3004%206.94872%2020.8935%207.41365%2021.3265C7.87858%2021.7595%208.49034%2022.0002%209.12566%2022H14.8728C16.1902%2022%2017.2836%2020.9812%2017.3783%2019.6667L17.9839%2011.1773C17.9858%2011.1519%2017.9867%2011.1266%2017.9868%2011.1012V10.3981C17.9864%208.81037%2017.3555%207.28782%2016.2329%206.16516C15.1102%205.04249%2013.5862%204.41162%2011.9985%204.41124Z'%20fill='%23FFC56D'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M4.98299%2010.025C4.84165%2010.025%204.7017%2010.0528%204.57112%2010.1069C4.44055%2010.161%204.3219%2010.2403%204.22196%2010.3402C4.12203%2010.4402%204.04275%2010.5588%203.98866%2010.6894C3.93458%2010.82%203.90674%2010.9599%203.90674%2011.1012C3.90674%2011.2426%203.93458%2011.3825%203.98866%2011.5131C4.04275%2011.6437%204.12203%2011.7623%204.22196%2011.8623C4.3219%2011.9622%204.44055%2012.0415%204.57112%2012.0956C4.7017%2012.1497%204.84165%2012.1775%204.98299%2012.1775H19.0173C19.3027%2012.1775%2019.5765%2012.0641%2019.7783%2011.8623C19.9801%2011.6604%2020.0935%2011.3867%2020.0935%2011.1012C20.0935%2010.8158%2019.9801%2010.5421%2019.7783%2010.3402C19.5765%2010.1384%2019.3027%2010.025%2019.0173%2010.025H4.98299ZM8.41694%2014.6084H15.5819L15.2303%2019.5132C15.2241%2019.6038%2015.1838%2019.6887%2015.1175%2019.7508C15.0512%2019.8128%2014.9638%2019.8474%2014.873%2019.8476H9.12582C9.03499%2019.8478%208.94745%2019.8136%208.88086%2019.7518C8.81428%2019.69%208.77361%2019.6052%208.76708%2019.5146L8.41694%2014.6084Z'%20fill='%23FF840A'/%3e%3c/svg%3e"
+                            alt="飲料icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>飲料</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--購物-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading-two">
+                <button
+                  class="accordion-button collapsed text-neutral-500"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#Shopping"
+                  aria-expanded="false"
+                  aria-controls="Shopping"
+                >
+                  購物
+                  <span class="accordion-icon ms-auto">
+                    <i data-lucide="chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="Shopping"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-heading-two"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul class="list-group mt-2 rounded-0">
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGCSURBVHgB3ZQxS8NAGIbfuxax0krBQRfBxcFBWkcRpK4urb+ggpuK5A9II+JsBCcnu7r5C4piEV1acBB0qeDQwcGpDpqcd7WJSZvcJSGLvkPIfXnzvJd8+QL8JbF7rchutTl3jSIhseZeDZ9mC5bZYg0tn2hAHw6mD5Z5jH8VEwsYgo8ojTjQw1wF1OqgtFWWwWMFsKOJGpipg/FF9wmYmZf6U4gMh+4U3l6ATA7ITrlMrE5WTg17SZTQFv8iPlBC46zggbu1sDp4EnbC4Zr7ElHCe1aDnxXRfQYer4PNs4uXpHpXGS7TUHAhsUOx0yC9PhT8yjQU3JYsxELdr5wKDbclGioaKxrs3IQDst/TlQFKuF+IBC7knYOeecyPcrgt8boyk22yfqHLbE4PWHNbgDcRRfnpd5Xlt8l0TGn2iJA2MqkNlc0JIMtGR0whwqgPp2tkyVBuamTQ2M3uOQdUkQDcN0AaEhEeGOAbEgMuDfgJ2eE/LlrmvblCNm1Ehf8PfQN29ZssvQJHYQAAAABJRU5ErkJggg=="
+                            alt="美妝icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>美妝</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEzSURBVHgB1ZTLTcNAEIb/sTlw3BJcAhwhHEgFpAS4giCmBCrACME1pINQQUDCcAwd4BJ85MDuMM6DsLYTbLJWlF+yPN7HfDPe2QE2XVQ2yPHpDrDVE1NNVnmXtB8NrDWv3Wswd6afKfB1Qq379z8BY+fsD2VG/RpO4Plt2ouSeQD+KLdVILqdh1gAfgsDGDMUK0BRiWQyABsFRicXwEIIVXReR1a23s+w1j0HzjMF4MzXRHMAUQBXYlJFAOsbuBLr/sy0D/nlLJT/15Xym0WgUFVEyXgfmys6uItKARYsvviocybUui315aFhLQE4qai1ZpDdykYB1DTAjVwB0o0HoD7AoI/K4sdFM4Rl2+LzY3kdyXOIQl+S3gN+EuNZ2sTDvwAWbBQqfE4h20hpN3JSxivrG4t5aCFrYvwqAAAAAElFTkSuQmCC"
+                            alt="服飾icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>服飾</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--家居-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading-three">
+                <button
+                  class="accordion-button collapsed text-neutral-500"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#Home"
+                  aria-expanded="false"
+                  aria-controls="Home"
+                >
+                  家居
+                  <span class="accordion-icon ms-auto">
+                    <i data-lucide="chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="Home"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-heading-three"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul class="list-group mt-2 rounded-0">
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFtSURBVHgB7ZQ/TgJREMa/2SUxMRYcYb0B2mFiAjeQI9jzZzkBeIONsQdLKziACYYoJFYkFrZQW0iiBdmwb3wskOzu2/9qpb/qZXbm+/JmZh/wp+Bns8RT08hSQ2mSXFF2emBU3IBGXSpfX6WpTTSQ4hU4zkBmFgOf+rD1NlWtZW4DnjRbYLZiUubQ9CqVrXlUghYp/tTsJIhvMCCcUdxcKFIc3EV6Im+iGPCkfgGmATJDM9haNTgTX4vcqwrqIRdcwgF3glH/DIQYhWxLBg9h8qRhhhrs+m7guzA63qG7BttApqHGUZSbZfkMfoF3n8FuvS7lSf7+NA8teVsAL/fA6xhY21HCfdmiNg719j6gruljYzPoilI6vQNWn9uzcQocn6jypNfozBp6Q+lbtBd3zx/hObRW3iXVQKMFfhDVgLFEXlaFWbKBEEPkgTAMe7oLSt75zQOP6zXZqhaIDI+AB/YHhLjFUSHp5f0nnC+wF4MfPKlAIgAAAABJRU5ErkJggg=="
+                            alt="房租icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>房租</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHsSURBVHgB3VQ9SwNBEH2bRE2hYKGghRgLCxHBCBYSEAUrq1hZqr1i/oH6CxQMtsZfoBZ2giL40SVFgkKKKBESUDGghBhzt87eomYve7nTTqfI7e7tvDfvTeaAvx7sJ5f5xeomuBlF1R9m01slLzk+eAx+vrJI4DFahtDG17zmeVLAL2MhmOYJrUJfhz4+zSbip2653hSYxpoCbp2xXX4S63RLdSWwrAEWNa88WdXUIp6kCstmsqH6+nCxqrmCsrnaFNyqgjVV4ahANtbIKYeVV+C5APQO2q8vsch2QofjrMBqbF3UqkA+DdycAaWi/bajCq2ChupF5ckj+Qy0EdkbEGwHJubhpiKgI4BhRBXqlycJLgAFsFiXCvZSF+g3YYdysIgtKNuWVvm8JnvyGUnQY+sDx5RuLvQEjI8q+85eYHyO9BLRfUbalUs25gVro/YjvUVkgIBVk8makRm5zl4RETV8IAy30BNwdquoeLgD0sdAV79U8Uj7YEdjXiWQsh/pLeI4VPbdBDw0Kf+qxSzQNwyEZ9UchlPdJ1xPUPNtQdr0HaKpwhKhIjQmlahF7emgnCf5bDkKP9uHp+AbLBJf171xnGQ2GT+AwefAqB+/BLdw4FabmGrjnQbPT7Px2XiLlPpUS7DITgr/Oj4A/TmpaOf0xq4AAAAASUVORK5CYII="
+                            alt="水電icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>水電</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIOSURBVHgB1VVPT9RQEP/N21UMrKZ640BSjkZNlqMX7SbeZb/B+gXIejRiwBDOoB49gJ9Av4Bh1RiPcjGejDWaoFFjTVZYlb5hXlvYbrvQV8IBfknbmdd58+v8eVPgpINsDXlx9GMkaHWL7nU7tvuqNka8OFYHsxspKnlaQllZaZ5OaesoATsCouuJFNDdP0dLwPOOI3cvUV+gJIojqITenkz0DCVRTKDCmymtVHrsCAAvuhP8svk32LdN+W3bwWY4jfcvXfS6wO+vHRwCNNTxFs+BdXvgxf9eBzzWpMZygBLIR7Cp14Smnls/dcYDhSsiNXmh5snh8AbeKzIpXMVBEfDrmTnTmDgIqjKJ54+fDv0IVo3sGMlG0EIRtLRtJWxiu+oOEnNAs91cE+wR8Ku2B4QuikBw6E7PF8mHBfoRUFi32QBGVGQZgC0ZgEsiOhmD2zS7tTyEAPG8+bUBfHkHXLkRr3//BPyQ6+K1XUtjtypjOwDp/Lngio+hETC5IEbU892ffYu/ogcb6T0tfjPj09WH90UuHB2pCFJdsf2vb1G7EJOaterpeE3zPK+1H5gzEaUqCy0tm3RTioD86Kdyfjx2Zr7aGY8v4/izpG1yasBP8iNayREQm9RNZQhUAxwuYaTmYPSci28fHHEeF3DisqmLj4lLsmMkELsn1Hhkir3OC2ebUDpT6PJD8fhiB7yCuw17LccJAAAAAElFTkSuQmCC"
+                            alt="清潔用品icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>清潔用品</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--交通-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading-four">
+                <button
+                  class="accordion-button collapsed text-neutral-500"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#traffic"
+                  aria-expanded="false"
+                  aria-controls="traffic"
+                >
+                  交通
+                  <span class="accordion-icon ms-auto">
+                    <i data-lucide="chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="traffic"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-heading-four"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul class="list-group mt-2 rounded-0">
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIBSURBVHgB3ZVBSxtBFMf/b7NJpViQtjn0ULMUeig9tJ5KWwoVem/8BFG8KuYbaMCLJ6NfwHyEHL2pIHoQNCCKiOCKQgRBFyImxmTHtztms2N21US9+Ifkzc6beb+3M/tmgGcW3TdAbKR7UEFPoLMLFvVlLbQDECsjSQhtnFvf8VAJWNBQAEWG6GfWDAWI1bQBu76PzmWiGumj/uZb6YrbttNee38DsIpA5Tw8XFe3tO8TwMevTstArJ5kmwsGEK+1YHtywLms415VStI6icQTTaBPmvJki4RrL+/IOky1aiNLIxDgbi7dOK+qaB9w2YiUcvfyNoC/nGn+M/B4GRD1OQUgib7gtQ7eoOxbVsEQP6BFnQBCJAEVqNWox9C2ov45ZCkAtzBskXkUoDnHAtleLLWSl0cXuOevW1xnRbQlpw5cCGXo9+yExw0c7BTMh894Cul3eot70sZ7W5ft/BQoncp+x/8ggEYHEKIZYGdJtqP/5Hnj1+EWcLzLb/tGBZCwwgF1Pg0bH273W6B/GKH68kf+WhQxlZwVX03LcgoFdCyRoV/ZvL8n8EYTU+9yiOgpryPeO4NPP5SJ2Jwfw0Up6T2/ig3Q6GH+dqzgTa6WTQV9tF2g1NqiksTk60FlTlkLvDqDARrl+Tz5zxvG9wPxvkQXW8YILcf+b94YXTfxInUN9yOeNRMWaGQAAAAASUVORK5CYII="
+                            alt="通勤icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>通勤</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHJSURBVHgB7VW7TgJBFD2zKoqPSGIsjNFsQ2VDS2zgC6CwB1oboSRqhIixxfAB4hdIaScUamFDbeNqLExQQyIBQ9wd7yzPhYVlwcp4kt3s3Dtzzsx9zAL/6AE/ce7x46VgazxtcN7sesBmQoDmGcyAC7adyZqTzx+RPwGmFmmYEzbWdt5FfVDVS7K4YI0siUTMyaFAcvhZvKwIu9SeoWnnI5ILhPltNNhHrvPQCZvkbQHavUxvGXbA1EAfuQkkTAB+OicPIxcwJBlvT8DnByyxsQU4HOY+iSmDBUrPwOsDLLHmNgqIxHJ+hqnZXHf8+wXGBsuzg2oaqPV5jALORcC1BktM94SHw8NTzqjZCfQ+0KtIUx9hBxL1gjcT4an5LI1CXYwJtl9NdqZNCApNGFzy0zZjjVwgoZ/mtwR0kcMK5aCWhqT5m7QBewIlKt97ulq+68OF4l9K44u77AlUqDcq741nCMRN2lBixZZt/DItvfh4auG6PWZcdLVMX2VIM0l7AqJzVzeBxZWOrV6TDfcX11XylOhYd6mOJiDqvptcYN2dZTtXEauleg6YN61Q3BTYgYbCKNM6J2BUy1yj+uXLI6wrDPqr/T38AMgImcSb4ENzAAAAAElFTkSuQmCC"
+                            alt="加油費icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>加油費</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--學習-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading-five">
+                <button
+                  class="accordion-button collapsed text-neutral-500"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#learn"
+                  aria-expanded="false"
+                  aria-controls="learn"
+                >
+                  學習
+                  <span class="accordion-icon ms-auto">
+                    <i data-lucide="chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="learn"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-heading-five"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul class="list-group mt-2 rounded-0">
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALOSURBVHgB3VRLTxNRFP5u22mrhWSIkoALLEaIJEYhJEbiI+0vkJU7AzGuTISyNEJoo8YlRX8AZeHCleDCLWNMQ1xoMUEXxEeNMe2CyCiPAG3neu6dtjPT0gdxpWcz994z9/vOOd85F/jXjdVz8uVICG9fXIO/NYjTF1Qkn+oIDi7i1KDGhuJpNGGeA4GTt/vB3DPY+RWCngX6egHFDwSOAbm9YRgFIh+LsqHHMTQwV3XUYyOAOwWOEDYy5uHxk+a3nb7ZNXNt8ChPjqX4UkRtmoBKEqSLifLB+jdA7aQ8veZe7QDy+4CeKd3oh6/wvGkCGMaSYy+AOnusfYlsI2uLCiGevDOKRgT8NQkKHrTAs2a0AtRuHb22DIrGMIJGBHAZww5PhmrdQqL6W5w32rtMgt0tOLKooYXVRT8+nodLsTwCxN9KRJ+cN/J75vfrO6DrnCbXv9dD8AX6aaXVJlhblqE4TERZWQ46AWMLyHyeZ7feazKBR/4gRYP6GYRv6g5P6qVZnr6rFrDBZ9HiiWMxQTf3RvmDwDQY6WawGHJYqE/A8YrEsnRoI3G/rwoB0+SLsUtPEjyqqlD2x+lWhByqzFgmzefofJo/DGhU5hi7q6dLMOWnQorkLWzAXp7lZ8CZKwmsvpkggDkCG0YzxlgCOWWCRXW93EUsHDdLUDJRHiHyFxLTt6s2DS6j5aNw54XoFYOW90SJPV3eiycit2OLjOqs+PSawB4fgbNZwhhgU1taFYHMgrnCtFqRB6Ln7ebyTuDyDV0Kbx9Ase65CAxdB5vajrB72ytlzsogis/wgBz/thPTUI4ChU3rB9HOXWdpontMnXY3TYKtn9QUH1CFhwbGUyS+aEslNyOEI7HFSxuUoILkSKs5dMV5YZM77FAEVYT3A3Hq/fGDvUxjk9th+4kLhzRRY7iNblrOW4fUlm5vdyX4X5t4IuTw/df2ByYh/Iyt8WxIAAAAAElFTkSuQmCC"
+                            alt="線上課icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>線上課</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH/SURBVHgB3VW9SgNBEP42njFFhEMRFAS1CChaqCD+oUZLKytbESxF4hPoIwjxAfQJxEJbgz8oCCaNIEZQUYigyBUpgiRZZ7I5k0vucpdY6Qd3N7s3O9/M7M4s8NchnH7Iy0gY+dwKqQzTUKeZ3oqlTxDyiQQDEodiOrrnmUBebGzRexv1uRoTU9H5ymlflfEz8tw0nkkDySvg/RmukAiTY9uuBPBxWop4vAFeb4G7UyD7BQ8sK+4EEr0/spGi7Hcp416iQNlaRwIIXRl/Uynq6AECQeAtCS+QJxG9fKxV24dSSN2rMe8Bg6PgR/MD6U9rytgBfgpyYb3hTABZjIDS0xkC+kZUJPFjlSaO6PrAuoT1BmZhBxuCYgSBVjI+WvSO5O5BoNmvIhhZVJqPcRUN65logu5GoGAaMRGaKHOBNj6VVFGGxkvpYeSyFgKbTfYATtnDlUpN91BN1cYI4kfqy5GYp80BGuoF59w0yAXICLYDY0tKbtKM3xEE24DJZeuc1lKSc3AlYAUdtcCnygkZVwJhFGqBTwiflBr5LSNMoH9mH8hDzEc9puiFmtyHp/5D/qQOxVpix+6XXSUnwE2LK9ZsB2absAPXgD8wJ88XItRmjMqLp+rCkWfrYfjECRoEEVhsVtWBmNmN0WeV2nascC3Cumk2MJQePTK/iX+Hb0Sro12T2fRAAAAAAElFTkSuQmCC"
+                            alt="書籍icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>書籍</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--娛樂-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading-six">
+                <button
+                  class="accordion-button collapsed text-neutral-500"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#entertainment"
+                  aria-expanded="false"
+                  aria-controls="entertainment"
+                >
+                  娛樂
+                  <span class="accordion-icon ms-auto">
+                    <i data-lucide="chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="entertainment"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-heading-six"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul class="list-group mt-2 rounded-0">
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHuSURBVHgB1VW9ThtBEP7Gd4YEGWkJVf6ka5BSBOVSRRGKYp4A5wGikBeIqCIhhASioAQEPS7pgBeAo4ACCq6gxx0g8bOAbczZZpm7w/YdNmCwLcQn3d3O7s73zexq5oCXDsITobaHBLLFBNYXfiKfiUORhBb9RcMyFdyn1004JgS0gglSA2zGcXZhegtOprQDKDqLPPhat4Cajxvo6U3gcHcAOysuofAWYt3s2QbI/dsuppoURjALvSrKaD7BwXxhaxCXBwLUC1xmwzSxN/73ZK86qkLB4HeqpgCizjaTG2VbvK1N1HUzL0Pzkn1naDRtBSfLAmqikyMvGiGizptI00dhAfeIXMKstNlzGRSxaCRjowYCGShZtepmkEv7jwvi1K9oGR1dS+jQbPp/JPEAKgJF3YbuuA6iTO5FeWqx+Bq09qXK5c2hXoTqQE29X0X0tYm2dhvdH9fw7pOFR4K+T1t3C2z8S0KpP2gMSeqb/VsyImg+BtXmkNlKAb7PgmitQAAtF7i/2aWPufQdf/wq5j9NE3CJtxYDO7m5/fiN5gm4hD3fgPNj3y61jYYErpTNlVGpgw+f8STk9HJfCl9yXkuCKIWGoMapf1rWFPAWKNLPbdfC4yH5BMapb24sxHnXbu+fm4NAneAelMJz4Bo+tZ31vBPtIAAAAABJRU5ErkJggg=="
+                            alt="電影icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>電影</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHySURBVHgBzVW/SyNBFP7ebCLHeULgrvDg4HKFxXGFp9WdhVhbxb9A7QW1FBUVtVew1z8hjdZqoZ2mEQsLIwoRLFTwF2LmObOzbmbirtkkCH6w7Jt5s9/33pvZN8A7g2ot4N2x7JsE/5eKb/pfEe6M5MBiRll/UReoAJJz1LOSjxXwo5XlYzSOKwivy85KOG4ph9AcMuByzp5IOW5CFhzYDzfA4baKqQT8+AN0/EMiMGXsoYhdeHpgyDXOlH1xgkQQ/DNeQFrOdIv7ob1bT48mwwRIxXp0WS5LJov2DuBboK2zOd4zInr+Vzfw6UsDAimVQVd/ZWzvyQvOj8z4d6/a3u+RNG6JSB2zKGjy/XWX3PFtGLHaAnQdS16r5qUkAo2S25B0Ei/AVonqJU+1RE+7AlwMj6MmznYjMdq+mjeJQryA5+XBclQJZZFph//UA4IOsOBORaBWi47lj2jdoQDPt+UgyoPVvaQhEMZp8tbPpFIiUl2QkUPY7ZqA1DyoEvDkLJ7SeQhpMmBeDX1MyyqqTmX0BRGqvYL+ZwYrAdJwaGse3MERoImHojo6RZ9vsXWoEg5t0vTtGM9/nlXEfYH4Fk3dL/FCa6d986myrKEK0T8aq4tDnwhFDi8dRCY2zbWoT4q2ddblAX+NnmPZ/N59SDwDDA206ZYRSW8AAAAASUVORK5CYII="
+                            alt="展覽icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>展覽</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--醫療-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading-seven">
+                <button
+                  class="accordion-button collapsed text-neutral-500"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#medical"
+                  aria-expanded="false"
+                  aria-controls="medical"
+                >
+                  醫療
+                  <span class="accordion-icon ms-auto">
+                    <i data-lucide="chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="medical"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-heading-seven"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul class="list-group mt-2 rounded-0">
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABYmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgIHRpZmY6T3JpZW50YXRpb249IjEiLz4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz4iLqjnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHXSURBVHgB3VVNSwJBGH5m20xQIfo4dKn9B+mhQ4Sgp6BL/YHoD0R17RAZFB0z8Af0Fzp06uBGULfcoCAwaD3pocBIyER3mnHVdXdn1RUv9RwW55l5n2fmfecdgb8OAp+gp0EFhnTWCr+ENK6S/bI+OoPjUJZ9E3ZSSpKDiipaL8E3aNStQre8VvsyoCchLj4pmLrBKAwYomKVcdUrQHYS9H5P6Roqtsnn7DqqFYdCQMPiKouDQpbTulOvU2R6t7MLg6YYI0qBH+iQxpJtM6mza0rTIxDnUIDGYXtgpqjOyH7VKObZ3nI8JcDSRu+11Eqt3PrqMHrHNHNf/cJAoPi0G1RRRsBjcbkEfDPxyofFFV/Nk0SmgGBYEET09q9mYkgyXe4mO6jXgNwV8MKu+XvB4vn46Rp4e4AQhOo2g9a5NPiFPOFl0NGy+sAgj6zl7dXjaYhvspP8sN2yApfyJs+LzOeCEbFBVdYEJzBU4eK2ULdYeNpbHEQzU+4wIPGMyhrtHF6YnWev0Bwws4DesGvYn4q6nEKgwRXcF53vOraGPuJHZCVz0c3Y2qt1mwoYFjU57aTc/UsbOoYBYc0adD81wn80erudMO2JgkFgsHsfljUSs4r7f/ALUMOHTqPDjHwAAAAASUVORK5CYII="
+                            alt="中醫icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>中醫</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHISURBVHgB5VQ7TwJBEJ45LlFRExoLOy20ls5nIpWl8AuEHoVejEdEW56VDdJbYGIPMRELC/gHaK0FBZ7GyI5zhMcez7tApV9yd7uZ2e+bnbkZgH8NunSe81M1vsN8cCxJOeyCLxFizxpuppImW8xJEpOGp3q097wC46A3vCBIgwYl6PE422PNddVAo9hc2L6AoBdp56dSKN7eYET3c+SSHeN0NX9kSwD3MkUW6V6dRJieTpo559xnOfKVnoBu6GLRa1mgiQU1we+aRKLR7UGZyf1SKMXOUhGHlgWaRdZFgZcuk2F5fQNW3S1uDGDkwwOEyVbKOj8DWiOnjaFOb9Uieu89w8zKROQGllb32zUZBJyIXIaCGm6lLPaBXXIDRuEH3KRPgB6CXnvkWDGLBPdHCoBDsU5OlMOdlNvcJ6prtACYOnc0+W7Gbyy5GTX+BADJh9uJvOzWV2QqcIEVvQrqjGsEfR530j6wgP4blK5D8JznCVoffAI5505HACzCIW+ac52nIvx8A7y/creu1UBRZ03kc4oH3YmaVQG1j7yNz3oUhJNnEI9rwBVAUcHtdB5sAiWBamcyEkTxTNdgCujWQODdtMn/Bn4B4cXB8K6GIaYAAAAASUVORK5CYII="
+                            alt="西醫icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p>西醫</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="d-flex align-items-center py-3">
+            <svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="me-4"
+            >
+              <circle
+                cx="22"
+                cy="22"
+                r="21"
+                stroke="#B0B0B0"
+                stroke-width="1"
+                stroke-dasharray="4 4"
+              />
+              <foreignObject x="0" y="0" width="44" height="44">
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <i data-lucide="plus" class="icon-16 text-neutral-600"></i>
+                </div>
+              </foreignObject>
+            </svg>
+            新增類別
+          </a>
+        </main>
+      </div>
+      <img
+  src="data:image/svg+xml,%3csvg%20width='343'%20height='34'%20viewBox='0%200%20343%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='144'%20height='5'%20rx='2.5'%20transform='matrix(-1%200%200%201%20244%2021)'%20fill='black'/%3e%3c/svg%3e"
+  alt="statusbar"
+  class="object-fit-cover fixed-bottom bottom-0 start-50 translate-middle-x"
+  style="z-index: 1050"
+/>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script>
+      document.querySelectorAll(".list-group-item-action").forEach((item) => {
+        item.addEventListener("click", () => {
+          // 先移除其他 item 的 active
+          document
+            .querySelectorAll(".list-group-item-action")
+            .forEach((i) => i.classList.remove("active"));
+          // 再給自己加上 active
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

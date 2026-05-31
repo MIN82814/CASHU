@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <title>帳本</title>
+  <script type="module" crossorigin src="/CASHU/assets/main-DKZf0DiU.js"></script>
+  <link rel="stylesheet" crossorigin href="/CASHU/assets/main-COe7y4l1.css">
+</head>
+
+<body>
+    <div class="mobile-frame bg-white position-relative">
+        <img
+  src="/CASHU/assets/Status%20bar-C_-zPuPq.svg"
+  alt="statusbar"
+  class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+  style="background-color: rgba(255, 255, 255, 0.625)"
+/>
+            <div class="container-fluid" style="padding-bottom: 105px; padding-top: 50px">
+                <main class="plan-save">
+                    <div>
+                         <div class="py-4 d-flex justify-content-between align-items-center">
+             <i data-lucide="chevron-left" class="icon-24 icon-transparent"></i>
+            <span class="h2 fw-bold">計畫</span>
+            <i data-lucide="history" class="icon-24 text-neutral-600"></i>
+          </div>
+                        
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <span class="badge rounded-pill bg-inactive-background py-2 px-2">
+                                <span
+                                    class="badge rounded-pill bg-inactive-background text-neutral-500 book-date fs-5 me-3">日</span>
+                                <span class="badge rounded-pill bg-white text-neutral-950 book-mouth fs-5 me-3">月</span>
+                                <span
+                                    class="badge rounded-pill bg-inactive-background text-neutral-500 book-year fs-5 me-3">年</span>
+                                <span
+                                    class="badge rounded-pill bg-inactive-background text-neutral-500 book-mine fs-5">自訂</span>
+                            </span>
+                        </div>
+                        <div class=" d-flex justify-content-between align-items-center">
+                            <i data-lucide="chevron-left" class="icon-40 p-3 text-neutral-600 font-weight-normal"></i>
+                            <span class="text-neutral-950 subheader-3">2025/07</span>
+                            <i data-lucide="chevron-right" class="icon-40 p-3 text-neutral-600"></i>
+                        </div>
+                        <div class="addrecord">
+                            <ul class="nav nav-underline border-bottom text-center d-flex justify-content-center" id="account-tab" role="tablist">
+                                <li class="nav-item tab-two">
+                                    <a class="nav-link active line-height-sm"  id="tab-saving" data-bs-toggle="tab" href="#pane-saving" role="tab"
+           aria-controls="pane-saving" aria-selected="true">存錢計畫</a>
+                                </li>
+                                <li class="nav-item tab-two">
+                                    <a class="nav-link line-height-sm" id="tab-budget" data-bs-toggle="tab" href="#pane-budget" role="tab"
+           aria-controls="pane-budget" aria-selected="false">新增預算</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content py-6" id="nav-tabContent">
+                                <div class="tab-pane fade show active"  id="pane-saving" role="tabpanel" aria-labelledby="tab-saving" tabindex="0">
+                                 
+                                <!--東京自由行-->
+                                 <div class="card shadow border-0 mb-4">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M23.2712%205.52949C24.8216%205.38111%2026.3775%205.74873%2027.6975%206.57526C29.0176%207.40179%2030.0278%208.64101%2030.5714%2010.1005C30.7501%2010.6795%2030.692%2011.3058%2030.4099%2011.8421C30.1277%2012.3783%2029.6444%2012.7809%2029.066%2012.9615L22.1974%2015.1902L21.7658%2015.3321L20.5461%2019.5039C20.484%2019.739%2020.3624%2019.9541%2020.1932%2020.1287C20.024%2020.3033%2019.8127%2020.4314%2019.5796%2020.5008L16.4858%2021.5058C16.2369%2021.6082%2015.9649%2021.6407%2015.699%2021.6C15.4331%2021.5592%2015.1833%2021.4467%2014.9765%2021.2746C14.7698%2021.1024%2014.6139%2020.8771%2014.5257%2020.623C14.4374%2020.3688%2014.4202%2020.0954%2014.4758%2019.8322L14.9499%2017.5223L8.63249%2019.5627C8.35322%2019.6646%208.05653%2019.7101%207.75957%2019.6966C7.46261%2019.6831%207.17128%2019.6108%206.90241%2019.484C6.63354%2019.3572%206.39248%2019.1784%206.19317%2018.9578C5.99385%2018.7373%205.84024%2018.4794%205.74121%2018.1991L5.73716%2018.1869L3.38685%2010.8927L3.38077%2010.8765C3.281%2010.5268%203.32148%2010.1519%203.4936%209.83144C3.66573%209.51102%203.95595%209.2703%204.30266%209.16037L7.07845%208.26886C7.37155%208.17747%207.68822%208.18226%207.97841%208.28251C8.26859%208.38277%208.51909%208.57323%208.69327%208.82605L10.3547%2011.456L20.384%206.46152C21.2677%205.9456%2022.2527%205.62761%2023.2712%205.52949Z'%20fill='%23ADE2DC'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M31.1668%2026.4765C31.1668%2025.9392%2030.9534%2025.4238%2030.5734%2025.0438C30.1934%2024.6638%2029.6781%2024.4504%2029.1407%2024.4504H4.85962C4.32226%2024.4504%203.80691%2024.6638%203.42693%2025.0438C3.04696%2025.4238%202.8335%2025.9392%202.8335%2026.4765C2.8335%2027.0139%203.04696%2027.5293%203.42693%2027.9093C3.80691%2028.2892%204.32226%2028.5027%204.85962%2028.5027H29.1407C29.6781%2028.5027%2030.1934%2028.2892%2030.5734%2027.9093C30.9534%2027.5293%2031.1668%2027.0139%2031.1668%2026.4765Z'%20fill='%23379590'/%3e%3c/svg%3e"
+                alt="travel-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">59 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">東京自由行</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$ 46,700</p>
+                        <p class="body-2 text-neutral-400">$ 200,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/03/08 - 2025/09/30</p>
+                  </div>
+                </div>
+  </div>  </div>
+                                  <!--新沙發-->
+                                   <div class="card shadow border-0 mb-4">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M14.8853%203.67445C15.4617%203.23688%2016.1654%203%2016.8891%203C17.6128%203%2018.3165%203.23688%2018.8929%203.67445L20.351%204.78129C24.6353%208.03518%2028.3055%2012.0264%2031.1897%2016.5677L31.6558%2017.3034C31.8679%2017.6374%2031.9864%2018.0223%2031.9989%2018.4177C32.0114%2018.8132%2031.9175%2019.2047%2031.727%2019.5515C31.5364%2019.8982%2031.2563%2020.1875%2030.9157%2020.3889C30.5752%2020.5904%2030.1869%2020.6968%2029.7912%2020.6968H28.2646C28.353%2022.7294%2028.2425%2024.7641%2027.9332%2026.7767C27.6239%2028.7783%2025.9007%2030.2541%2023.877%2030.2541H9.90119C7.8753%2030.2541%206.15428%2028.7783%205.84719%2026.779C5.53789%2024.7641%205.42743%2022.7272%205.5158%2020.6968H3.98698C3.59133%2020.6968%203.20296%2020.5904%202.86245%2020.3889C2.52194%2020.1875%202.24178%2019.8982%202.05125%2019.5515C1.86071%2019.2047%201.7668%2018.8132%201.77931%2018.4177C1.79182%2018.0223%201.9103%2017.6374%202.12237%2017.3034L2.58852%2016.5677C5.4727%2012.0264%209.14294%208.03518%2013.4272%204.78129L14.8853%203.67445Z'%20fill='%23ADE2DC'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M14.1277%2030.2541V22.9724C14.1277%2022.24%2014.4187%2021.5376%2014.9366%2021.0197C15.4545%2020.5018%2016.1569%2020.2108%2016.8893%2020.2108C17.6217%2020.2108%2018.3241%2020.5018%2018.842%2021.0197C19.3599%2021.5376%2019.6509%2022.24%2019.6509%2022.9724V30.2541H14.1277Z'%20fill='%23379590'/%3e%3c/svg%3e"
+                alt="home-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">60 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">新沙發</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$1,200</p>
+                        <p class="body-2 text-neutral-400">$30,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 10%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/01/01 - 2025/10/01</p>
+                  </div>
+                </div>
+  </div>  </div>
+                                 <!--冬季歐洲旅遊-->
+                                  <div class="card shadow border-0 mb-4">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M15.5681%2024.7201C16.6008%2024.7475%2017.6335%2024.7454%2018.6704%2024.7138C18.6899%2024.8152%2018.6998%2024.9182%2018.6999%2025.0215V29.8309C18.6999%2030.2501%2018.5333%2030.6521%2018.2369%2030.9486C17.9405%2031.245%2017.5384%2031.4115%2017.1192%2031.4115C16.7%2031.4115%2016.298%2031.245%2016.0015%2030.9486C15.7051%2030.6521%2015.5386%2030.2501%2015.5386%2029.8309V25.0215C15.5386%2024.9182%2015.547%2024.8171%2015.566%2024.7201H15.5681Z'%20fill='%23379590'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M17.2352%202.64381C17.1622%202.60743%2017.0817%202.5885%2017.0002%202.5885C16.9186%202.5885%2016.8382%202.60743%2016.7652%202.64381C13.1107%204.46471%209.804%207.75246%208.0105%2011.4996C7.89918%2011.7294%207.85647%2011.9864%207.8875%2012.2399C7.91852%2012.4933%208.02196%2012.7324%208.18542%2012.9285C8.34659%2013.1202%208.54843%2013.2735%208.77628%2013.3774C9.00412%2013.4813%209.25225%2013.5332%209.50263%2013.5292H10.5817C10.8767%2013.5292%2011.0685%2013.6767%2011.1507%2013.8327C11.2329%2013.9802%2011.2287%2014.1509%2011.0875%2014.309C9.09166%2016.5219%207.69437%2018.5283%205.86503%2021.6811C5.31075%2022.6358%205.99148%2023.6685%206.98835%2023.8434C13.7872%2025.0384%2020.2152%2025.0384%2027.012%2023.8434C28.0088%2023.6685%2028.6896%2022.6358%2028.1353%2021.6811C26.306%2018.5283%2024.9108%2016.5219%2022.9149%2014.309C22.7737%2014.1509%2022.7674%2013.9802%2022.8475%2013.8327C22.9318%2013.6767%2023.1215%2013.5292%2023.4186%2013.5292H24.4977C24.7481%2013.5332%2024.9962%2013.4813%2025.2241%2013.3774C25.4519%2013.2735%2025.6537%2013.1202%2025.8149%2012.9285C25.9786%2012.7325%2026.0822%2012.4934%2026.1132%2012.2399C26.1443%2011.9864%2026.1014%2011.7294%2025.9898%2011.4996C24.1963%207.75246%2020.8917%204.46471%2017.2352%202.64381Z'%20fill='%23ADE2DC'/%3e%3c/svg%3e"
+                alt="trip-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">165 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">冬季歐洲旅遊</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$ 70,000</p>
+                        <p class="body-2 text-neutral-400">$ 80,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 76%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/07/06 - 2025/12/31</p>
+                  </div>
+                </div>
+  </div>  
+</div>
+                                 <!--結婚基金-->
+                                 <a href="plan-save.html" style="display: block;">
+                                  <div class="card shadow border-0">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20.4197%201.41669H13.5801L9.33008%205.66669L15.9983%2012.3349H18.0015L24.6697%205.66669L20.4197%201.41669Z'%20fill='%23379590'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M16.9998%2012.75C14.7455%2012.75%2012.5835%2013.6456%2010.9894%2015.2396C9.39537%2016.8337%208.49984%2018.9957%208.49984%2021.25C8.49984%2023.5044%209.39537%2025.6664%2010.9894%2027.2604C12.5835%2028.8545%2014.7455%2029.75%2016.9998%2029.75C19.2542%2029.75%2021.4162%2028.8545%2023.0102%2027.2604C24.6043%2025.6664%2025.4998%2023.5044%2025.4998%2021.25C25.4998%2018.9957%2024.6043%2016.8337%2023.0102%2015.2396C21.4162%2013.6456%2019.2542%2012.75%2016.9998%2012.75ZM5.6665%2021.25C5.6665%2018.2442%206.86055%2015.3616%208.98596%2013.2361C11.1114%2011.1107%2013.9941%209.91669%2016.9998%209.91669C20.0056%209.91669%2022.8883%2011.1107%2025.0137%2013.2361C27.1391%2015.3616%2028.3332%2018.2442%2028.3332%2021.25C28.3332%2024.2558%2027.1391%2027.1385%2025.0137%2029.2639C22.8883%2031.3893%2020.0056%2032.5834%2016.9998%2032.5834C13.9941%2032.5834%2011.1114%2031.3893%208.98596%2029.2639C6.86055%2027.1385%205.6665%2024.2558%205.6665%2021.25Z'%20fill='%23ADE2DC'/%3e%3c/svg%3e"
+                alt="wedding-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">6209 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">結婚基金</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$ 46,700</p>
+                        <p class="body-2 text-neutral-400">$ 200,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 10%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/07/06 - 2028/08/20</p>
+                  </div>
+                </div>
+  </div>  
+</div></a>
+
+                                </div>
+                                <div class="tab-pane fade " id="pane-budget" role="tabpanel" aria-labelledby="tab-budget"
+                                    tabindex="0" style="height: 50vh;">
+                                      <!--東京自由行-->
+
+                                  <!--新沙發-->
+
+                                 <!--冬季歐洲旅遊-->
+
+                                 <!--結婚基金-->
+
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <div class="position-fixed  end-0 bottom-0 w-100">
+                          <div class=" fixed-btn ">
+                        <a href="#"  class="d-block btn btn-white position-absolute  end-0 rounded-5 shadow-lg d-flex align-items-center justify-content-center " style="bottom: 115px; width:160px; height: 52px;">   <i data-lucide="plus" class="icon-24  " style="margin-right: 2.5px;"></i><span class="h4">新增計畫</span></a>
+                        </div>
+                        </div>
+                </main>
+     <nav>
+      <div class="nav-bottom pt-3">
+        <ul class="nav justify-content-center pb-4">
+          <li class="nav-item item-home">
+            <a class="nav-link p-0 text-center" href="index.html">
+              <span class="Icon-home"></span
+              ><span class="d-block body-2 home">首頁</span></a
+            >
+          </li>
+          <li class="nav-item item-plan">
+            <a
+              class="nav-link p-0 text-center"
+              href="plan-save-detail.html"
+            >
+              <span class="Icon-plan"></span
+              ><span class="d-block body-2 plan">計畫</span></a
+            >
+          </li>
+          <li class="nav-item item-State">
+            <a class="nav-link p-0" href="log-add.html">
+              <img
+                class="d-block"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQISURBVHgB5ZtPTttAFMY/T+i/TRXEAQonAE7QIHVPd12SFiJV6oLkBIQTNCwqVaWIdMeSHqAqnIBwAtJ9q2RRCdomcb83sfOHOInt2E5s/ySTCXaivDffzLyZN2MgZBpvsYq/yGEJ6+iwDF4msjB0uY+JOv/XZKnOq8b313iA2vJH/T40DIRAY48GK2yjjZcjhnqnxu8Qh3xZ/owLBExgDmgUWau/UeQP3QnAaGcM1DMGym2Fy6CUMbMDeoYD+7yyiAI6QhTBZlWd1REzOYBSF8MPEJXh97EU8fQTneH7K3ygO7YWTlnMYREQRWSw5UcNCh7Rtd7CFRbFeMHUFXJlKdITnhTQ2EWFn9jHYnPI0aLs9mHXDqDxVT69gzhgsnM8wWs3j7pyQKNAyZvYQLyoUQmb0x6a2gfomo+f8cIGf/vptIcmOoCdSjk2snfCQJ42vJ/8yBisHnXih2NEic2h4nTD0QHWOC9D3XwCnOBpMmrcdIoTnJtAG9+RHOOFrBW4jTDiAPb4eR1YJI+cU6A01AS09KX2k+kAoUklrC1X9bqDZlgBrcTWvk2WfcFQJNtTQApq32ZIBX0FtDm5idj4Ry+K+oqYIRX0FVDATdQOyB6b+rVZCGVlbjxcf+RcYU2KWgF6DS/50u/DJTttM+wmEOdw1z/b8qfrgHhOdmbD5Io1Ubr3RwodwGZw+w7PFP6l0HiLuzvkFD2xjrRiYEP6gNQqgKyKA1aRXugAM1HTXm/QdhVaHi8O0HaDEZGJgJC4/smrcFfRbs9K+POtgqDwnBmaP4HVlyZQBXhlbpOhAZTemZFWaLuytqWkE9oufUAd6aWedgfUVLuDa6SXmso8DH7nVWxo4VrpdFE6R4IaV4br9pLYOdKGiZq82JHgV6QNhWr3hegdmGlqBrIsfoxLKS71/mloj5QRIbdnkSdFbMp2oZ8YyeuMyQ2SlRYfRZTexpZ0gPK2Nxu0cmXBzTMXFSrdNl64nx0+AhI8N5Dabw1vqx1ygKigAxwiuZQHa19w3iO0p7fI5JAkBhKigzivCLX0LsvkNAWTtrDjc7rl6ACRSaKaghqVfv/WGFa6++qSMCqUGfQcjbs5dTHu1y6qKq7pcxebpt1tlt7TmybTuVlakC/qmP6PpUSO1LwL4wXXeYGVE+QR8VzBJxW3ZwUET4kRevWQo0MJizhEylBnoMjfWPLyMX+HpvLMJ2YYLC1OXvFCYpdxQ90kZkrJ/HyDfMbAwdwcIbWuJg9z05j94KSoYYnDpMk+IipHdOVekcnb4L5fPwR3dJaOaCvkQlVE94B1NQjDbcI5PF3Ac3S0IiR2mC1+6Bp9Lpe9jBUkoadlrSYiG7FsZ7g5Pl/Xq7aPcbH8AT8QIv8BmCA9hXG65mEAAAAASUVORK5CYII="
+                alt="State-Default"
+            /></a>
+          </li>
+          <li class="nav-item item-ledger">
+            <a class="nav-link p-0 text-center" href="book.html">
+              <span class="ledger-icon"></span
+              ><span class="d-block body-2 ledger">帳本</span></a
+            >
+          </li>
+          <li class="nav-item item-assets">
+            <a class="nav-link p-0 text-center" href="#">
+              <span class="assets-icon"></span
+              ><span class="d-block body-2 assets">資產</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+                <img
+  src="data:image/svg+xml,%3csvg%20width='343'%20height='34'%20viewBox='0%200%20343%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='144'%20height='5'%20rx='2.5'%20transform='matrix(-1%200%200%201%20244%2021)'%20fill='black'/%3e%3c/svg%3e"
+  alt="statusbar"
+  class="object-fit-cover fixed-bottom bottom-0 start-50 translate-middle-x"
+  style="z-index: 1050"
+/>
+            </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+        <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname; // 取得目前網址路徑
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          // 如果 a 的 href 包含目前的 path，就加 active
+          if (currentPath.includes(link.getAttribute("href"))) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+</body>

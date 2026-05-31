@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>成功存入一筆！</title>
+    <script type="module" crossorigin src="/CASHU/assets/main-DKZf0DiU.js"></script>
+    <link rel="stylesheet" crossorigin href="/CASHU/assets/main-COe7y4l1.css">
+  </head>
+  <body>
+    <div
+      class="container-fluid px-0 mobile-frame position-relative overflow-y-auto bg-white vh-100 scroll-hidden"
+    >
+      <img
+  src="/CASHU/assets/Status%20bar-C_-zPuPq.svg"
+  alt="statusbar"
+  class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+  style="background-color: rgba(255, 255, 255, 0.625)"
+/>
+      <section
+        class="d-flex flex-column justify-content-center bg-Deco-confetti -13"
+      >
+        <div
+          class="d-flex flex-column justify-content-center align-items-center px-6"
+        >
+          <img
+            class="splash-screen"
+            src="/CASHU/assets/splash-screen-Dr98GbFr.gif"
+            alt=""
+          />
+          <h2 class="text-center mb-3 text-neutral-950">🎉 成功存入一筆！</h2>
+          <p class="text-center body-2 text-neutral-500">
+            Cashu 恭喜你離目標又更進一步了～
+            <br />
+            別小瞧日積月累的力量，<br />
+            每天小額存、一樣輕鬆達標！
+          </p>
+        </div>
+      </section>
+
+      <div
+        class="container fixed-bottom pt-6 bg-white"
+        style="padding-bottom: 34px; width: 375px"
+      >
+        <img
+  src="data:image/svg+xml,%3csvg%20width='343'%20height='34'%20viewBox='0%200%20343%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='144'%20height='5'%20rx='2.5'%20transform='matrix(-1%200%200%201%20244%2021)'%20fill='black'/%3e%3c/svg%3e"
+  alt="statusbar"
+  class="object-fit-cover fixed-bottom bottom-0 start-50 translate-middle-x"
+  style="z-index: 1050"
+/>
+        <div class="row">
+          <div class="col-6">
+            <button
+              type="button"
+              class="btn btn-outline-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
+            >
+              <a href="plan-save">回計畫</a>
+            </button>
+          </div>
+          <div class="col-6">
+            <button
+              type="button"
+              class="col-6 btn btn-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
+            >
+              <a href="plan-save-detail.html">再存一筆</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname; // 取得目前網址路徑
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          // 如果 a 的 href 包含目前的 path，就加 active
+          if (currentPath.includes(link.getAttribute("href"))) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

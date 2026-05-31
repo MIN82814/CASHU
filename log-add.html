@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <title>新增紀錄-CASHU</title>
+    <script type="module" crossorigin src="/CASHU/assets/main-DKZf0DiU.js"></script>
+    <link rel="stylesheet" crossorigin href="/CASHU/assets/main-COe7y4l1.css">
+  </head>
+
+  <body>
+    <div class="mobile-frame bg-white position-relative">
+      <img
+  src="/CASHU/assets/Status%20bar-C_-zPuPq.svg"
+  alt="statusbar"
+  class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+  style="background-color: rgba(255, 255, 255, 0.625)"
+/>
+      <div
+        class="container-fluid"
+        style="padding-bottom: 109px; padding-top: 50px"
+      >
+        <main class="log-add">
+          <div class="py-4 d-flex justify-content-between align-items-center">
+            <a href="index.html">
+              <i
+                data-lucide="chevron-left"
+                class="icon-24 text-neutral-600"
+              ></i>
+            </a>
+            <span class="h2 fw-bold">新增紀錄</span>
+            <i data-lucide="chevron-right" class="icon-24 icon-transparent"></i>
+          </div>
+          <div class="position-relative">
+            <input
+              type="text"
+              id="consult_datetime"
+              class="form-control py-4 px-5 h-44 subheader-3"
+              readonly
+              inputmode="none"
+            />
+            <span
+              id="calendar_icon"
+              class="calendar_icon position-absolute top-50 end-0 translate-middle-y me-5"
+              style="cursor: pointer"
+            >
+              <i data-lucide="calendar" class="text-neutral-300"></i>
+            </span>
+          </div>
+
+          <!--支出/收入/轉帳-->
+          <div class="addrecord">
+            <ul
+              class="nav nav-underline border-bottom text-center"
+              id="account-tab"
+              role="tablist"
+            >
+              <li class="nav-item tab-three">
+                <a
+                  class="nav-link active line-height-sm"
+                  id="expenseAmount-tab"
+                  data-bs-toggle="tab"
+                  href="#expenseAmount"
+                  role="tab"
+                  aria-controls="expenseAmount"
+                  aria-selected="true"
+                  >支出</a
+                >
+              </li>
+              <li class="nav-item tab-three">
+                <a
+                  class="nav-link line-height-sm"
+                  id="income-tab"
+                  data-bs-toggle="tab"
+                  href="#income"
+                  role="tab"
+                  aria-controls="income-tab"
+                  aria-selected="false"
+                  >收入</a
+                >
+              </li>
+              <li class="nav-item tab-three">
+                <a
+                  class="nav-link line-height-sm"
+                  id="transfer-money-tab"
+                  data-bs-toggle="tab"
+                  href="#transfer-money"
+                  role="tab"
+                  aria-controls="transfer-money-tab"
+                  aria-selected="false"
+                  >轉帳</a
+                >
+              </li>
+            </ul>
+
+            <div class="tab-content" id="nav-tabContent">
+              <!--支出-->
+              <div
+                class="tab-pane fade show active"
+                id="expenseAmount"
+                role="tabpanel"
+                aria-labelledby="expenseAmount-tab"
+                tabindex="0"
+              >
+                <section class="py-5 d-flex align-items-center flex-column">
+                  <!-- <button
+                    type="button"
+                    class="categoy-icon category-icon-xl mb-4 border-0"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"
+                  ></button>-->
+                  <a
+                    href="category-page.html"
+                    class="categoy-icon category-icon-xl mb-4 border-0"
+                  >
+                    <img
+                      src="data:image/svg+xml,%3csvg%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M43.4559%2013.4094C43.8147%2014.276%2043.9996%2015.2049%2043.9996%2016.1429C44.0019%2017.2521%2043.7447%2018.3466%2043.2484%2019.3387C42.7524%2020.3309%2042.0313%2021.1933%2041.1424%2021.8571V36.1428C41.1424%2036.9006%2040.8413%2037.6274%2040.3056%2038.1631C39.7699%2038.6988%2039.043%2039%2038.2853%2039H19.7139V9H36.8567C37.7947%209%2038.7236%209.18474%2039.5901%209.54371C40.4567%209.90269%2041.2441%2010.4288%2041.9076%2011.0921C42.5707%2011.7554%2043.097%2012.5428%2043.4559%2013.4094Z'%20fill='%23FF840A'/%3e%3cpath%20d='M31.1429%2016.1429C31.1429%2015.2049%2030.9581%2014.276%2030.5991%2013.4094C30.2402%2012.5428%2029.714%2011.7554%2029.0508%2011.0921C28.3875%2010.4288%2027.6001%209.90269%2026.7335%209.54371C25.8668%209.18474%2024.938%209%2024%209H11.1429C9.64368%209%208.18254%209.47169%206.96634%2010.3483C5.75017%2011.2249%204.84062%2012.4619%204.36655%2013.8841C3.89247%2015.3063%203.8779%2016.8417%204.3249%2018.2726C4.77191%2019.7036%205.65781%2020.9576%206.85714%2021.8571V36.1428C6.85714%2036.9006%207.15817%2037.6274%207.69397%2038.1631C8.2298%2038.6988%208.95651%2039%209.71428%2039H25.4286C26.1863%2039%2026.9131%2038.6988%2027.4489%2038.1631C27.9847%2037.6274%2028.2857%2036.9006%2028.2857%2036.1428V21.8571C29.1745%2021.1933%2029.8957%2020.3309%2030.3918%2019.3387C30.8879%2018.3466%2031.1451%2017.2521%2031.1429%2016.1429Z'%20fill='%23FFC56D'/%3e%3c/svg%3e"
+                      alt="早餐icon"
+                  /></a>
+
+                  <p>早餐<i data-lucide="pencil" class="icon-15 ms-2"></i></p>
+                </section>
+                <!--input-->
+                <section>
+                  <ul class="row mb-4 pt-2">
+                    <li class="col-6">
+                      <input
+                        type="text"
+                        id="category-name"
+                        class="form-control input-select h-44 text-neutral-300"
+                        placeholder="名稱"
+                      />
+                    </li>
+                    <li class="col-6">
+                      <input
+                        type="text"
+                        id="amount"
+                        class="form-control h-44 calc-input text-end"
+                        inputmode="none"
+                        placeholder="$0"
+                        readonly
+                      />
+                    </li>
+                    <li class="col-6">
+                      <div class="position-relative">
+                        <a
+                          href="select_account.html"
+                          class="inline-block btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium active"
+                        >
+                          現金
+                          <span
+                            id="calendar_icon"
+                            class="position-absolute top-50 end-0 translate-middle-y me-5 text-neutral-300"
+                            style="cursor: pointer"
+                          >
+                            <i data-lucide="chevron-right"></i>
+                          </span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="col-6">
+                      <div class="position-relative">
+                        <button
+                          type="button"
+                          class="btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium active"
+                        >
+                          生活開銷
+                          <span
+                            id="calendar_icon"
+                            class="position-absolute top-50 end-0 translate-middle-y me-5 text-neutral-300"
+                            style="cursor: pointer"
+                          >
+                            <i data-lucide="chevron-right"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control rounded-m"
+                      placeholder="Leave a comment here"
+                      id="floatingTextarea2"
+                      style="height: 200px; resize: none"
+                    ></textarea>
+                    <label for="floatingTextarea2">請輸入備註</label>
+                  </div>
+                </section>
+              </div>
+
+              <!--收入-->
+              <div
+                class="tab-pane fade"
+                id="income"
+                role="tabpanel"
+                aria-labelledby="income-tab"
+                tabindex="0"
+              >
+                <section class="py-5 d-flex align-items-center flex-column">
+                  <a href="#" class="categoy-icon category-icon-xl mb-4">
+                    <img
+                      src="data:image/svg+xml,%3csvg%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M14.7518%205.4735C15.689%204.53069%2016.9603%204.00067%2018.2861%204H29.7147C31.0408%204%2032.3126%204.52958%2033.2502%205.47225C34.1879%206.41492%2034.7147%207.69344%2034.7147%209.02658V14.7712C34.7147%2015.3426%2034.4889%2015.8905%2034.0871%2016.2945C33.6852%2016.6985%2033.1402%2016.9255%2032.5718%2016.9255C32.0035%2016.9255%2031.4585%2016.6985%2031.0566%2016.2945C30.6548%2015.8905%2030.429%2015.3426%2030.429%2014.7712V9.02658C30.429%208.83613%2030.3537%208.65348%2030.2198%208.51881C30.0858%208.38415%2029.9041%208.30849%2029.7147%208.30849H18.2861C18.0967%208.30849%2017.915%208.38415%2017.7811%208.51881C17.6471%208.65348%2017.5718%208.83613%2017.5718%209.02658V14.7712C17.5718%2015.3426%2017.3461%2015.8905%2016.9442%2016.2945C16.5424%2016.6985%2015.9973%2016.9255%2015.429%2016.9255C14.8607%2016.9255%2014.3156%2016.6985%2013.9138%2016.2945C13.5119%2015.8905%2013.2861%2015.3426%2013.2861%2014.7712V9.02658C13.2861%207.69381%2013.8118%206.41276%2014.7518%205.4735Z'%20fill='%23FF840A'/%3e%3cpath%20d='M8.28571%2012.4044C7.14907%2012.4044%206.05898%2012.8583%205.25526%2013.6663C4.45153%2014.4743%204%2015.5702%204%2016.7129L4%2039.6915C4%2040.8342%204.45153%2041.9301%205.25526%2042.7381C6.05898%2043.5461%207.14907%2044%208.28571%2044H39.7143C40.8509%2044%2041.941%2043.5461%2042.7447%2042.7381C43.5485%2041.9301%2044%2040.8342%2044%2039.6915V16.7129C44%2015.5702%2043.5485%2014.4743%2042.7447%2013.6663C41.941%2012.8583%2040.8509%2012.4044%2039.7143%2012.4044H8.28571Z'%20fill='%23FFC56D'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M23.9997%2015.2767C24.568%2015.2767%2025.113%2015.5037%2025.5149%2015.9077C25.9168%2016.3117%2026.1425%2016.8596%2026.1425%2017.431V18.9476C27.1478%2019.1178%2028.0895%2019.5555%2028.8697%2020.2151C29.65%2020.8748%2030.2404%2021.7323%2030.5797%2022.6988C30.7691%2023.2378%2030.7378%2023.8303%2030.4927%2024.3461C30.2475%2024.8619%2029.8086%2025.2586%2029.2725%2025.4491C28.7364%2025.6395%2028.147%2025.6081%2027.6339%2025.3616C27.1209%2025.1152%2026.7262%2024.674%2026.5368%2024.135C26.4387%2023.8548%2026.2566%2023.6121%2026.0156%2023.4403C25.7746%2023.2685%2025.4865%2023.176%2025.1911%2023.1756H22.4254C22.1688%2023.1775%2021.9218%2023.2741%2021.7314%2023.4472C21.5411%2023.6202%2021.4207%2023.8576%2021.3932%2024.1141C21.3657%2024.3706%2021.4329%2024.6283%2021.5822%2024.8382C21.7314%2025.0481%2021.9522%2025.1955%2022.2025%2025.2523L26.4111%2026.1772C27.7092%2026.4606%2028.8687%2027.1897%2029.69%2028.2394C30.5113%2029.289%2030.9432%2030.5935%2030.9114%2031.9286C30.8796%2033.2636%2030.3861%2034.5459%2029.5158%2035.5548C28.6455%2036.5637%2027.4527%2037.2363%2026.1425%2037.4569V38.9734C26.1425%2039.5448%2025.9168%2040.0927%2025.5149%2040.4967C25.113%2040.9007%2024.568%2041.1277%2023.9997%2041.1277C23.4313%2041.1277%2022.8863%2040.9007%2022.4844%2040.4967C22.0826%2040.0927%2021.8568%2039.5448%2021.8568%2038.9734V37.4569C20.8523%2037.2857%2019.9114%2036.8481%2019.1313%2036.1891C18.3513%2035.5301%2017.7604%2034.6738%2017.4197%2033.7085C17.2302%2033.1695%2017.2615%2032.577%2017.5066%2032.0612C17.7518%2031.5454%2018.1907%2031.1487%2018.7268%2030.9582C19.2629%2030.7678%2019.8523%2030.7992%2020.3654%2031.0457C20.8784%2031.2921%2021.2731%2031.7333%2021.4625%2032.2723C21.5611%2032.5519%2021.7434%2032.794%2021.9843%2032.9653C22.2253%2033.1366%2022.5131%2033.2286%2022.8082%2033.2288H25.1911C25.5472%2033.2344%2025.8925%2033.106%2026.1594%2032.8689C26.4263%2032.6318%2026.5954%2032.3031%2026.6337%2031.9471C26.6719%2031.5912%2026.5766%2031.2337%2026.3663%2030.9447C26.156%2030.6558%2025.8459%2030.4562%2025.4968%2030.3852L21.2854%2029.466C20.0494%2029.1936%2018.95%2028.4881%2018.1839%2027.4757C17.4178%2026.4632%2017.0349%2025.2098%2017.1036%2023.9396C17.1723%2022.6694%2017.6881%2021.4651%2018.5589%2020.5422C19.4297%2019.6192%2020.5987%2019.0377%2021.8568%2018.9016V17.4367C21.8561%2017.1533%2021.9109%2016.8726%2022.0183%2016.6106C22.1256%2016.3485%2022.2834%2016.1104%2022.4824%2015.9097C22.6815%2015.7091%2022.9179%2015.5499%2023.1783%2015.4413C23.4387%2015.3326%2023.7178%2015.2767%2023.9997%2015.2767Z'%20fill='%23FF840A'/%3e%3c/svg%3e"
+                      alt="薪水icon"
+                    />
+                  </a>
+                  <p>薪水<i data-lucide="pencil" class="icon-15 ms-2"></i></p>
+                </section>
+                <!--input-->
+                <section>
+                  <ul class="row mb-4 pt-2">
+                    <li class="col-6">
+                      <input
+                        type="text"
+                        id="income-name"
+                        class="form-control input-select h-44"
+                        placeholder="名稱"
+                      />
+                    </li>
+                    <li class="col-6">
+                      <input
+                        type="text"
+                        id="income-amount"
+                        class="form-control h-44 calc-input text-end"
+                        inputmode="none"
+                        placeholder="$0"
+                        readonly
+                      />
+                    </li>
+                    <li class="col-6">
+                      <div class="position-relative">
+                        <button
+                          class="btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium active"
+                        >
+                          台新銀行
+                          <span
+                            id="calendar_icon"
+                            class="position-absolute top-50 end-0 translate-middle-y me-5 text-neutral-300"
+                            style="cursor: pointer"
+                          >
+                            <i data-lucide="chevron-right"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="col-6">
+                      <div class="position-relative">
+                        <button
+                          type="button"
+                          class="btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium"
+                        >
+                          選擇計畫
+                          <span
+                            id="calendar_icon"
+                            class="position-absolute top-50 end-0 translate-middle-y me-5 text-neutral-300"
+                            style="cursor: pointer"
+                          >
+                            <i data-lucide="chevron-right"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control rounded-m"
+                      placeholder="Leave a comment here"
+                      id="floatingTextarea2"
+                      style="height: 200px; resize: none"
+                    ></textarea>
+                    <label for="floatingTextarea2">請輸入備註</label>
+                  </div>
+                </section>
+              </div>
+
+              <!--轉帳-->
+              <div
+                class="tab-pane fade"
+                id="transfer-money"
+                role="tabpanel"
+                aria-labelledby="income-tab"
+                tabindex="0"
+              >
+                <section class="py-5 d-flex justify-content-center">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                    style="width: 224px"
+                  >
+                    <div class="d-flex align-items-center flex-column">
+                      <a href="#" class="categoy-icon categoy-icon-m mb-3">
+                        <img
+                          src="data:image/svg+xml,%3csvg%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M33.3838%2020.9541V35.3941H40.9952V20.9512L40.8866%2020.9541H33.3838Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20.1943%2020.9541V35.3941H27.8058V20.9541H20.1943Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M7.00488%2020.9512V35.3941H14.6163V20.9541H7.11345L7.00488%2020.9512Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M22.2457%204.66554C22.7873%204.34715%2023.4055%204.18236%2024.0337%204.18891C24.662%204.19545%2025.2766%204.37307%2025.8114%204.70269L42.7%2015.7598C43.9%2016.5513%2044.2629%2017.9141%2043.8%2019.077C43.3543%2020.197%2042.2286%2020.9541%2040.8857%2020.9541H7.11429C5.77143%2020.9541%204.64571%2020.197%204.2%2019.077C3.73714%2017.9141%204.10286%2016.5513%205.3%2015.7627L5.30286%2015.7598L22.1886%204.70269C22.2073%204.68985%2022.2264%204.67746%2022.2457%204.66554ZM4%2037.9341C4%2036.2198%205.63429%2035.3941%206.85714%2035.3941H41.1429C42.3657%2035.3941%2044%2036.2198%2044%2037.937V41.2713C44%2042.9855%2042.3657%2043.8113%2041.1429%2043.8113H6.85714C5.63429%2043.8113%204%2042.9855%204%2041.2684V37.9341Z'%20fill='%23FFC56D'/%3e%3c/svg%3e"
+                          alt="銀行icon"
+                        />
+                      </a>
+                      <p class="Body-2">台新銀行</p>
+                    </div>
+                    <i data-lucide="arrow-right-left" class="icon-24"></i>
+                    <div class="d-flex align-items-center flex-column">
+                      <a href="#" class="categoy-icon categoy-icon-m mb-3">
+                        <img
+                          src="data:image/svg+xml,%3csvg%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M33.3838%2020.9541V35.3941H40.9952V20.9512L40.8866%2020.9541H33.3838Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20.1943%2020.9541V35.3941H27.8058V20.9541H20.1943Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M7.00488%2020.9512V35.3941H14.6163V20.9541H7.11345L7.00488%2020.9512Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M22.2457%204.66554C22.7873%204.34715%2023.4055%204.18236%2024.0337%204.18891C24.662%204.19545%2025.2766%204.37307%2025.8114%204.70269L42.7%2015.7598C43.9%2016.5513%2044.2629%2017.9141%2043.8%2019.077C43.3543%2020.197%2042.2286%2020.9541%2040.8857%2020.9541H7.11429C5.77143%2020.9541%204.64571%2020.197%204.2%2019.077C3.73714%2017.9141%204.10286%2016.5513%205.3%2015.7627L5.30286%2015.7598L22.1886%204.70269C22.2073%204.68985%2022.2264%204.67746%2022.2457%204.66554ZM4%2037.9341C4%2036.2198%205.63429%2035.3941%206.85714%2035.3941H41.1429C42.3657%2035.3941%2044%2036.2198%2044%2037.937V41.2713C44%2042.9855%2042.3657%2043.8113%2041.1429%2043.8113H6.85714C5.63429%2043.8113%204%2042.9855%204%2041.2684V37.9341Z'%20fill='%23FFC56D'/%3e%3c/svg%3e"
+                          alt="銀行icon"
+                        />
+                      </a>
+                      <p class="Body-2">富邦銀行</p>
+                    </div>
+                  </div>
+                </section>
+                <!--input-->
+                <section>
+                  <ul class="row pt-2">
+                    <li class="col-6">
+                      <label for="Out-Acc" class="form-label">轉出金額</label>
+                      <input
+                        type="text"
+                        id="Out-Acc"
+                        class="form-control h-44 calc-input text-end"
+                        inputmode="none"
+                        placeholder="$0"
+                        readonly
+                      />
+                    </li>
+                    <li class="col-6">
+                      <label for="In-Acc" class="form-label">轉入金額</label>
+                      <input
+                        type="text"
+                        id="In-Acc"
+                        class="form-control h-44 calc-input text-end"
+                        inputmode="none"
+                        placeholder="$0"
+                        readonly
+                      />
+                    </li>
+
+                    <li class="col-12 pb-4">
+                      <input
+                        type="text"
+                        id="transfer-name"
+                        class="form-control input-select h-44"
+                        placeholder="名稱"
+                      />
+                    </li>
+                  </ul>
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control rounded-m"
+                      placeholder="Leave a comment here"
+                      id="floatingTextarea2"
+                      style="height: 200px; resize: none"
+                    ></textarea>
+                    <label for="floatingTextarea2">請輸入備註</label>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <!--底部彈開按鈕+計算機-->
+          <!-- Offcanvas -->
+          <div class="offcanvas-bottom mobile-frame" id="calculator">
+            <!-- 部分展開 -->
+            <div class="partial-view" id="partialView">
+              <div class="expand-handle"></div>
+              <div class="d-flex gap-4 align-items-center">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center h-44"
+                  onclick="event.stopPropagation(); voiceFunction()"
+                >
+                  <i data-lucide="mic"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center h-44"
+                  onclick="event.stopPropagation(); qrFunction()"
+                >
+                  <i data-lucide="qr-code" class="align-middle"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center h-44"
+                  style="width: 165.5px"
+                  onclick="event.stopPropagation(); saveFunction()"
+                >
+                  儲存
+                </button>
+              </div>
+            </div>
+
+            <!-- 完全展開 -->
+            <div class="calculator-full" id="calculatorFull">
+              <div class="expand-handle"></div>
+              <!-- Header 按鈕 -->
+              <div class="calculator-header row mb-4">
+                <!-- 語音記帳 -->
+                <div class="col-6 voice-col">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
+                    onclick="voiceFunction()"
+                  >
+                    語音記帳
+                  </button>
+                </div>
+
+                <!-- 發票記帳 -->
+                <div class="col-6 invoice-col">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
+                    onclick="qrFunction()"
+                  >
+                    發票記帳
+                  </button>
+                </div>
+              </div>
+
+              <div class="calculator-grid">
+                <button class="calc-btn number" onclick="inputNumber('7')">
+                  7
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('8')">
+                  8
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('9')">
+                  9
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('÷')">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%2012H19M13%206C13%206.55228%2012.5523%207%2012%207C11.4477%207%2011%206.55228%2011%206C11%205.44772%2011.4477%205%2012%205C12.5523%205%2013%205.44772%2013%206ZM13%2018C13%2018.5523%2012.5523%2019%2012%2019C11.4477%2019%2011%2018.5523%2011%2018C11%2017.4477%2011.4477%2017%2012%2017C12.5523%2017%2013%2017.4477%2013%2018Z'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Divide"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button
+                  class="calc-btn function subheader-2"
+                  onclick="clearAll()"
+                >
+                  AC
+                </button>
+
+                <button class="calc-btn number" onclick="inputNumber('4')">
+                  4
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('5')">
+                  5
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('6')">
+                  6
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('×')">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M18%206L6%2018M6%206L18%2018'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Multiply"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn function" onclick="backspace()">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.9999%209L17.9999%2015M17.9999%209L11.9999%2015M9.99994%205C9.50302%205.00003%209.02391%205.18504%208.65594%205.519L2.32794%2011.259C2.22466%2011.3527%202.14213%2011.467%202.08565%2011.5946C2.02918%2011.7221%202%2011.86%202%2011.9995C2%2012.139%202.02918%2012.2769%202.08565%2012.4044C2.14213%2012.532%202.22466%2012.6463%202.32794%2012.74L8.65594%2018.481C9.02391%2018.815%209.50302%2019%209.99994%2019H19.9999C20.5304%2019%2021.0391%2018.7893%2021.4142%2018.4142C21.7892%2018.0391%2021.9999%2017.5304%2021.9999%2017V7C21.9999%206.46957%2021.7892%205.96086%2021.4142%205.58579C21.0391%205.21071%2020.5304%205%2019.9999%205H9.99994Z'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Backspace"
+                    class="object-fit-cover"
+                  />
+                </button>
+
+                <button class="calc-btn number" onclick="inputNumber('1')">
+                  1
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('2')">
+                  2
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('3')">
+                  3
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('-')">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%2012H19'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Minus"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button
+                  class="calc-btn function subheader-4"
+                  onclick="memory()"
+                >
+                  再記
+                </button>
+
+                <button class="calc-btn number" onclick="inputNumber('00')">
+                  00
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('0')">
+                  0
+                </button>
+                <button
+                  class="calc-btn number d-flex justify-content-center align-items-center"
+                  onclick="inputOperator('.')"
+                >
+                  .
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('+')">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%2012H19M12%205V19'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Plus"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn equals" onclick="calculate()">
+                  <a href="add-result.html"> <i data-lucide="check"></i></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- <div class="side">
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-body">
+              <div class="category-page">
+                <div
+                  class="py-4 d-flex justify-content-between align-items-center"
+                >
+                  <a href="log-add.html"
+                    ><i data-lucide="chevron-left" class="icon-40 p-3"></i
+                  ></a>
+                  <span class="h2">選擇類別</span>
+                  <i
+                    data-lucide="chevron-right"
+                    class="icon-40 p-3 icon-transparent"
+                  ></i>
+                </div>
+                <div
+                  class="accordion accordion-flush mb-4"
+                  id="accordionFlushExample"
+                >
+                 
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button
+                        class="accordion-button body-2"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#food"
+                        aria-expanded="true"
+                        aria-controls="food"
+                      >
+                        飲食
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
+                      </button>
+                    </h2>
+                    <div
+                      id="food"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <ul class="list-group mt-2 rounded-0">
+                          <li
+                            class="list-group-item list-group-item-action mb-2 active"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-category-food-breakfast-24.svg"
+                                  alt="早餐icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>早餐</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-category-food-lunch-24.svg"
+                                  alt="午餐icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>午餐</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-category-food-dinner-24.svg"
+                                  alt="晚餐icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>晚餐</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-category-food-dessert-24.svg"
+                                  alt="點心icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>點心</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-category-food-beverage-24.svg"
+                                  alt="飲料icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>飲料</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                 
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-two">
+                      <button
+                        class="accordion-button collapsed text-neutral-500"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#Shopping"
+                        aria-expanded="false"
+                        aria-controls="Shopping"
+                      >
+                        購物
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
+                      </button>
+                    </h2>
+                    <div
+                      id="Shopping"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-heading-two"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <ul class="list-group mt-2 rounded-0">
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-shopping-cosmetic-24.png"
+                                  alt="美妝icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>美妝</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-shopping-cloth-24.png"
+                                  alt="服飾icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>服飾</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-three">
+                      <button
+                        class="accordion-button collapsed text-neutral-500"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#Home"
+                        aria-expanded="false"
+                        aria-controls="Home"
+                      >
+                        家居
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
+                      </button>
+                    </h2>
+                    <div
+                      id="Home"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-heading-three"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <ul class="list-group mt-2 rounded-0">
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-home-rent-24.png"
+                                  alt="房租icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>房租</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-home-water_bill-24.png"
+                                  alt="水電icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>水電</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-home-cleaning_supplies-24.png"
+                                  alt="清潔用品icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>清潔用品</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+               
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-four">
+                      <button
+                        class="accordion-button collapsed text-neutral-500"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#traffic"
+                        aria-expanded="false"
+                        aria-controls="traffic"
+                      >
+                        交通
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
+                      </button>
+                    </h2>
+                    <div
+                      id="traffic"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-heading-four"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <ul class="list-group mt-2 rounded-0">
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-transportation-public_transportation-24.png"
+                                  alt="通勤icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>通勤</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-transportation-gas-24.png"
+                                  alt="加油費icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>加油費</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-five">
+                      <button
+                        class="accordion-button collapsed text-neutral-500"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#learn"
+                        aria-expanded="false"
+                        aria-controls="learn"
+                      >
+                        學習
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
+                      </button>
+                    </h2>
+                    <div
+                      id="learn"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-heading-five"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <ul class="list-group mt-2 rounded-0">
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-learning-online_course-24.png"
+                                  alt="線上課icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>線上課</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-learning-book-24.png"
+                                  alt="書籍icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>書籍</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+           
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-six">
+                      <button
+                        class="accordion-button collapsed text-neutral-500"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#entertainment"
+                        aria-expanded="false"
+                        aria-controls="entertainment"
+                      >
+                        娛樂
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
+                      </button>
+                    </h2>
+                    <div
+                      id="entertainment"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-heading-six"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <ul class="list-group mt-2 rounded-0">
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-entertainment-movie-24.png"
+                                  alt="電影icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>電影</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-entertainment-exhibition-24.png"
+                                  alt="展覽icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>展覽</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-seven">
+                      <button
+                        class="accordion-button collapsed text-neutral-500"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#medical"
+                        aria-expanded="false"
+                        aria-controls="medical"
+                      >
+                        醫療
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
+                      </button>
+                    </h2>
+                    <div
+                      id="medical"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-heading-seven"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <ul class="list-group mt-2 rounded-0">
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-medical-TCM-24.png"
+                                  alt="中醫icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>中醫</p>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-action mb-2"
+                          >
+                            <div class="d-flex align-items-center">
+                              <span
+                                class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                              >
+                                <img
+                                  src="/assets/images/Category/icon-medical-western-24.png"
+                                  alt="西醫icon"
+                                  class="text-neutral-950"
+                                />
+                              </span>
+                              <p>西醫</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="d-flex align-items-center py-3">
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="me-4"
+                  >
+                    <circle
+                      cx="22"
+                      cy="22"
+                      r="21"
+                      stroke="#B0B0B0"
+                      stroke-width="1"
+                      stroke-dasharray="4 4"
+                    />
+                    <foreignObject x="0" y="0" width="44" height="44">
+                      <div
+                        style="
+                          width: 100%;
+                          height: 100%;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                        "
+                      >
+                        <i data-lucide="plus" class="icon-16"></i>
+                      </div>
+                    </foreignObject>
+                  </svg>
+                  新增類別
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>-->
+        <img
+  src="data:image/svg+xml,%3csvg%20width='343'%20height='34'%20viewBox='0%200%20343%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='144'%20height='5'%20rx='2.5'%20transform='matrix(-1%200%200%201%20244%2021)'%20fill='black'/%3e%3c/svg%3e"
+  alt="statusbar"
+  class="object-fit-cover fixed-bottom bottom-0 start-50 translate-middle-x"
+  style="z-index: 1050"
+/>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 月曆的js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 初始化 Lucide icon
+        lucide.createIcons();
+
+        // 取得今天日期
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, "0");
+        const dd = String(today.getDate()).padStart(2, "0");
+        const todayFormatted = `${yyyy}/${mm}/${dd}`;
+
+        // 初始化 flatpickr
+        const fp = flatpickr("#consult_datetime", {
+          dateFormat: "Y/m/d",
+          defaultDate: todayFormatted,
+          allowInput: false,
+          disableMobile: true,
+          clickOpens: false, // ❌ 禁止點 input 自動打開
+        });
+
+        // 移除 Flatpickr 插入的 icon
+        const autoIcon = document.querySelector(
+          ".flatpickr-input ~ .flatpickr-icon, .flatpickr-calendar-button"
+        );
+        if (autoIcon) autoIcon.remove();
+
+        // 點擊 input 或 icon 開關日曆
+        const toggleCalendar = (e) => {
+          e.preventDefault(); // 防止 input focus
+          if (fp.isOpen) {
+            fp.close();
+          } else {
+            fp.open();
+          }
+        };
+
+        // 綁定事件
+        const inputEl = document.querySelector("#consult_datetime");
+        const iconEls = document.querySelectorAll(".calendar_icon");
+
+        inputEl.addEventListener("mousedown", toggleCalendar); // 用 mousedown 防止 focus
+        inputEl.addEventListener("focus", (e) => e.target.blur()); // 強制 blur，避免鍵盤彈出
+        iconEls.forEach((el) => el.addEventListener("click", toggleCalendar));
+      });
+      const inputEl = document.querySelector("#consult_datetime");
+
+      inputEl.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        inputEl.classList.add("is-active");
+        setTimeout(() => inputEl.classList.remove("is-active"), 200); // 點擊後0.2秒移除
+        toggleCalendar(e);
+      });
+    </script>
+    <!-- 月曆的js -->
+
+    <!--計算機-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const offcanvas = document.getElementById("calculator");
+        const partialView = document.getElementById("partialView");
+        const calculatorFull = document.getElementById("calculatorFull");
+        let isExpanded = false;
+
+        let activeInput = null;
+        let currentInput = "0",
+          operator = "",
+          previousInput = "",
+          shouldResetDisplay = false;
+
+        const singleInputIds = [
+          "Out-Acc",
+          "In-Acc",
+          "income-amount",
+          "transfer-money",
+          "income",
+        ];
+        const singleTabIds = ["income", "transfer-money"];
+
+        // --- 展開計算機 ---
+        function expandCalculator(input = null) {
+          if (input) activeInput = input;
+
+          offcanvas.classList.add("expanded");
+          partialView.classList.add("hidden");
+          calculatorFull.classList.add("active");
+          offcanvas.style.height = "334px";
+          offcanvas.style.transition = "height 0.2s";
+          isExpanded = true;
+          if (activeInput) activeInput.classList.add("focused");
+
+          updateHeaderButtons();
+        }
+
+        function collapseCalculator() {
+          offcanvas.classList.remove("expanded");
+          partialView.classList.remove("hidden");
+          calculatorFull.classList.remove("active");
+          offcanvas.style.height = "106px";
+          offcanvas.style.transition = "height 0.2s";
+          isExpanded = false;
+          if (activeInput) activeInput.classList.remove("focused");
+          activeInput = null;
+        }
+
+        // --- 更新 header 按鈕 ---
+        function updateHeaderButtons() {
+          const header = calculatorFull.querySelector(".calculator-header");
+          const voiceCol = header.querySelector(".voice-col");
+          const invoiceCol = header.querySelector(".invoice-col");
+
+          // 判斷是 input 或 tab
+          let singleMode = false;
+
+          if (activeInput && singleInputIds.includes(activeInput.id)) {
+            singleMode = true;
+          } else {
+            const activeTab = document.querySelector(
+              "#account-tab .nav-link.active"
+            );
+            if (activeTab) {
+              const tabId = activeTab.getAttribute("href").replace("#", "");
+              if (singleTabIds.includes(tabId)) singleMode = true;
+            }
+          }
+
+          if (singleMode) {
+            voiceCol.classList.remove("col-6");
+            voiceCol.classList.add("col-12");
+            invoiceCol.style.display = "none";
+          } else {
+            voiceCol.classList.remove("col-12");
+            voiceCol.classList.add("col-6");
+            invoiceCol.style.display = "block";
+          }
+        }
+
+        // --- 更新 input 顯示 ---
+        function updateInput() {
+          if (activeInput) activeInput.value = "$" + currentInput;
+        }
+
+        // --- 綁定 calc-input ---
+        document.querySelectorAll(".calc-input").forEach((input) => {
+          input.blur();
+
+          input.addEventListener("click", (e) => {
+            e.stopPropagation();
+            expandCalculator(input);
+          });
+
+          input.addEventListener("mousedown", (e) => {
+            e.preventDefault();
+            document.activeElement.blur();
+            expandCalculator(input);
+          });
+        });
+
+        partialView.addEventListener("click", (e) => {
+          e.stopPropagation();
+          expandCalculator(activeInput);
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!offcanvas.contains(e.target) && isExpanded) collapseCalculator();
+        });
+
+        offcanvas.addEventListener("click", (e) => e.stopPropagation());
+
+        // --- 監聽 Tab 切換 ---
+        document.querySelectorAll("#account-tab .nav-link").forEach((tab) => {
+          tab.addEventListener("shown.bs.tab", (e) => {
+            updateHeaderButtons();
+          });
+        });
+
+        // --- 計算功能 ---
+        function inputNumber(num) {
+          let value = currentInput.replace("$", "");
+          if (shouldResetDisplay || value === "0") {
+            currentInput = num;
+            shouldResetDisplay = false;
+          } else {
+            currentInput += num;
+          }
+          updateInput();
+        }
+
+        function inputOperator(op) {
+          if (operator && !shouldResetDisplay) calculate();
+          previousInput = currentInput.replace("$", "");
+          operator = op;
+          shouldResetDisplay = true;
+        }
+
+        function calculate() {
+          if (!operator || shouldResetDisplay) return;
+          let prev = parseFloat(previousInput),
+            current = parseFloat(currentInput.replace("$", "")),
+            result = 0;
+          switch (operator) {
+            case "+":
+              result = prev + current;
+              break;
+            case "-":
+              result = prev - current;
+              break;
+            case "×":
+              result = prev * current;
+              break;
+            case "÷":
+              result = prev / current;
+              break;
+          }
+          currentInput = result.toString();
+          operator = "";
+          previousInput = "";
+          shouldResetDisplay = true;
+          updateInput();
+        }
+
+        function clearAll() {
+          currentInput = "0";
+          operator = "";
+          previousInput = "";
+          shouldResetDisplay = false;
+          updateInput();
+        }
+
+        function backspace() {
+          currentInput =
+            currentInput.length > 1 ? currentInput.slice(0, -1) : "0";
+          updateInput();
+        }
+
+        function memory() {
+          if (operator) calculate(); // 如果有運算符號，先算出結果
+          updateInput(); // 直接更新顯示
+        }
+
+        // --- 全域方法 ---
+        window.inputNumber = inputNumber;
+        window.inputOperator = inputOperator;
+        window.calculate = calculate;
+        window.clearAll = clearAll;
+        window.backspace = backspace;
+        window.memory = memory;
+        window.voiceFunction = () => alert("語音");
+        window.qrFunction = () => alert("QR");
+        window.saveFunction = () => {
+          window.location.href = "add-result.html";
+        };
+
+        updateInput();
+
+        // --- 拖曳手勢 ---
+        let startY = 0,
+          startHeight = 0,
+          isDragging = false;
+        const minHeight = 106,
+          maxHeight = 334;
+
+        offcanvas.addEventListener("touchstart", (e) => {
+          if (e.touches.length !== 1) return;
+          isDragging = true;
+          startY = e.touches[0].clientY;
+          startHeight = offcanvas.offsetHeight;
+        });
+
+        offcanvas.addEventListener("touchmove", (e) => {
+          if (!isDragging) return;
+          const deltaY = startY - e.touches[0].clientY;
+          let newHeight = startHeight + deltaY;
+
+          if (newHeight > maxHeight) newHeight = maxHeight;
+          if (newHeight < minHeight) newHeight = minHeight;
+
+          offcanvas.style.height = newHeight + "px";
+          offcanvas.style.transition = "";
+
+          if (newHeight > (minHeight + maxHeight) / 2) {
+            partialView.classList.add("hidden");
+            calculatorFull.classList.add("active");
+            isExpanded = true;
+            updateHeaderButtons();
+          } else {
+            partialView.classList.remove("hidden");
+            calculatorFull.classList.remove("active");
+            isExpanded = false;
+          }
+        });
+
+        offcanvas.addEventListener("touchend", () => {
+          isDragging = false;
+          offcanvas.style.transition = "height 0.2s";
+
+          if (offcanvas.offsetHeight > (minHeight + maxHeight) / 2) {
+            expandCalculator();
+          } else {
+            collapseCalculator();
+          }
+        });
+      });
+    </script>
+    <!--測欄展開-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sideOffcanvasEl = document.querySelector(".side .offcanvas");
+        if (!sideOffcanvasEl) return;
+
+        const bsSideOffcanvas = new bootstrap.Offcanvas(sideOffcanvasEl);
+
+        // 展開動畫 + scrollTop
+        sideOffcanvasEl.addEventListener("show.bs.offcanvas", () => {
+          sideOffcanvasEl.classList.add("show");
+
+          const mobileFrame = document.querySelector(".mobile-frame");
+          if (mobileFrame) mobileFrame.scrollTop = 0;
+
+          if (!document.querySelector(".offcanvas-backdrop")) {
+            const backdrop = document.createElement("div");
+            backdrop.className = "offcanvas-backdrop fade show";
+            document.body.appendChild(backdrop);
+          }
+        });
+
+        // 關閉動畫
+        sideOffcanvasEl.addEventListener("hide.bs.offcanvas", (e) => {
+          e.preventDefault();
+
+          sideOffcanvasEl.classList.add("hiding");
+          sideOffcanvasEl.classList.remove("show");
+
+          const backdrop = document.querySelector(".offcanvas-backdrop");
+          if (backdrop) backdrop.classList.remove("show");
+
+          setTimeout(() => {
+            sideOffcanvasEl.classList.remove("hiding");
+            sideOffcanvasEl.style.display = "none";
+            sideOffcanvasEl.setAttribute("aria-hidden", "true");
+
+            if (backdrop) backdrop.remove();
+            bsSideOffcanvas._isShown = false;
+          }, 350);
+        });
+      });
+    </script>
+
+    <!--測欄展開項目active-->
+    <script>
+      document
+        .querySelectorAll(".offcanvas-body .list-group-item")
+        .forEach((item) => {
+          item.addEventListener("click", () => {
+            // 移除全部 active
+            document
+              .querySelectorAll(".offcanvas-body .list-group-item")
+              .forEach((i) => i.classList.remove("active"));
+
+            // 加給自己
+            item.classList.add("active");
+          });
+        });
+    </script>
+
+    <!--手風琴下拉箭頭-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 初始化所有 Lucide Icons
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>

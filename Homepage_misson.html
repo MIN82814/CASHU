@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>任務牆</title>
+    <script type="module" crossorigin src="/CASHU/assets/main-DKZf0DiU.js"></script>
+    <link rel="stylesheet" crossorigin href="/CASHU/assets/main-COe7y4l1.css">
+  </head>
+  <body>
+    <div class="container-fluid px-0 mobile-frame  position-relative overflow-y-auto bg-white vh-100 scroll-hidden custom-backdrop " id="customBackdrop"> 
+      <img
+  src="/CASHU/assets/Status%20bar-C_-zPuPq.svg"
+  alt="statusbar"
+  class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+  style="background-color: rgba(255, 255, 255, 0.625)"
+/>
+    <div class="fixed mt-9"> 
+    <nav class="navbar sticky-top ">
+      <div class="container-fluid">
+        <a href="mission-complete.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADNSURBVHgB7dZBCoMwEIXhl4DgMdKjeAuXHk1ceYteJfcQkmagQpHSRWbGRXkfCLr7iWQSgIiI6K8FOFiWJZVSnvK+bdsDChHGzrhaa2oPtEwDP+PaZz6OY4KS2S/+Frfve4aSSaBXnFAHesYJVaB3nOgOvCNOdO/iO+JEd+A540IIGMcRXroD3zMuyyrKasovhwPVJpnnOQ3DIEdaaiuZY4zTuq4ZhtRjxjvSZFB7RpoddV6Rptctj0jT24zMwuvuhpL5ffASCSIiIvrpBZTau/wUojNMAAAAAElFTkSuQmCC" alt="Previous-page"></a>
+        <a class="navbar-brand m-0 h2 " href="#">任務牆</a>
+        <a href="personal-accomplishment.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHvSURBVHgB7ZbNbcJAEIXHwIGj0wFUkLiCQAfJHSRTQaCCkApCKsARCHF0KoBUEDqIS4jEBYm/vGetJR9A2R1LOe0nwa7NjPcxOzNrEY/H4/F4qhCIkn6/v8LQsTRPZrPZQBQ4C4zjODydTsPz+fzs4gf7caPReEuS5MfFz1oghR2PxymmD6Xbf0YGkaZPXPap1+sjW6E1sQTiXo04PjgTdzLjGx8OhydbJ2uBYiK33+8jDC/iCNJibHwlCIKhrZ+LwJxmsylaNL4uAtf8QiRWiIBTgRDk3RC+X+YytfVr2BpigQEWaKEa70RB4YdxjRy0ThFrgabqIlTlPUd8WDQtC9fchnkHYZ+LxWIjDqgatWk535iGiEh3Pp+vr9i1jB134Ma1BxLnIiFcCMIm+QNqtSmFyAVxzFfO2aQ14oj6qDMnyqqUkwnmH9jKEPNbjDGuGeENIhyJErXAQqRp4PEVk3S73Q7SNFVFj1QSWFC8OLBC84cGQT5H5LpSkcoCe71eB4LyXMNJ0WYzNoXBPH28VkC2qIrkkjgwWS6XGYohg7B3XIf8jTZSgUoCWcEcWaV4qxkV9xE1Fsi4bKNFvcWl6GUQ175kU8rNrnarnQQWvQ0LtkQB/lCGiEYuPdF1i5n4ooW+u90uFI/H4/F4/o1f8nwCMVj7bi8AAAAASUVORK5CYII=" alt="task"></a>
+      </div>
+    </nav>
+    </div>
+    <div class="container">
+            <ul class="nav nav-underline gap-0  border-bottom border-2" id="myTab" role="tablist">
+                <li class="nav-item col-4 px-0  " role="presentation">
+                  <a class="nav-link button-notyet active text-center " id="notyet-tab" data-bs-toggle="tab" data-bs-target="#notyet" type="button" role="tab" aria-controls="notyet" aria-selected="true"><span class="pe-3">未開始</span><span>8</span></a>
+                </li>
+                <li class="nav-item col-4 px-0 " role="presentation">
+                  <a class="nav-link button-conduct text-center  " id="conduct-tab" data-bs-toggle="tab" data-bs-target="#conduct" type="button" role="tab" aria-controls="conduct" aria-selected="false"><span class="pe-3">進行中</span><span>13</span></a>
+                </li>
+                <li class="nav-item col-4 px-0 " role="presentation">
+                  <a class="nav-link button-finish text-center " id="finish-tab" data-bs-toggle="tab" data-bs-target="#finish" type="button" role="tab" aria-controls="finish" aria-selected="false"><span class="pe-3">已結束</span><span>3</span></a>
+                </li>
+            </ul>
+             </div>
+           
+            <div class="tab-content " id="myTabContent">
+              <div class="tab-pane fade show active " id="notyet" role="tabpanel" aria-labelledby="notyet">
+                     <div class="container  bg-primary-50 ">
+                      <div class="container d-flex h-38 align-items-center justify-content-between">
+                        <h4 class="subheader-4">挑戰時間</h4>
+                        <a class="d-flex align-items-center" href=""><p class="body-2 text-neutral-500 me-2">全部</p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACCSURBVHgB7Y3LDYAgEEQRGqAEWqEDuUNCJ5YiJdCBrVgCB85ENkJCcNGLRyYhfHbeg5CZ/2KM2a214qsHHa31Vu+0mYmU0vEmgRl08nF9CBhjKm9hJKlwXiHGKOv70pV4+YFTSqVz7sRg731ABZgE3kYwKuglRYDCQ0ErKbDC4Jk7F3X/anfT8GOzAAAAAElFTkSuQmCC" alt=""></a>
+                      </div>
+                      </div>
+                      <div class="container my-5">
+                        <!-- 卡片區 -->
+                        <div class="card shadow border-0 mb-5">
+                          <div class="card-body ">
+                            <h5 class="card-title h4 mb-2">手搖飲戒斷</h5>
+                            <p class="body-2 text-neutral-400 mb-3">2025/07/07 - 2026/07/08 23:59</p>
+                            <p class="card-text body-2 mb-4 text-neutral-900 text-hidden">放下身為台灣人的驕傲，每日拒絕手搖飲，沒事多喝水，省下銅板又存了健康！小小改變累積大成果，讓我們從今天開始，一起用行動愛自己、愛地球，也為荷包加分！</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>100</span></p>
+                              </div>
+                              <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasTop">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+                        <!-- 2 -->
+                          <div class="card shadow border-0 mb-5">
+                          <div class="card-body  ">
+                            <h5 class="card-title h4 mb-3">成為語音記帳者</h5>
+                            <p class="card-text body-2 mb-6 text-neutral-900 ">成功使用語音記帳 5 次</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>500</span></p>
+                              </div>
+                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+                          <!-- 3 -->
+                          <div class="card shadow border-0 mb-5">
+                          <div class="card-body  ">
+                            <h5 class="card-title h4 mb-3">設定每月預算上限</h5>
+                            <p class="card-text body-2 mb-4 text-neutral-900">幫某一類支出（如美食、娛樂）設定預算上限，幫助你理性消費不爆預算，Cashu 幫你把關！</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>200</span></p>
+                              </div>
+                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+                        <!-- 4 -->
+                           <div class="card shadow border-0 mb-5">
+                          <div class="card-body  ">
+                            <h5 class="card-title h4 mb-3">月底大掃帳計畫</h5>
+                            <p class="body-2 text-neutral-400 mb-3">2025/07/01 - 2025/07/31 23:59</p>
+                            <p class="card-text body-2 mb-4 text-neutral-900 text-hidden">月底快到了，幫帳本做個大掃除！刪掉錯誤記錄、補齊分類或備註三筆以上，讓帳本乾淨清爽，Cashu 才能舒服打滾～</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>200</span></p>
+                              </div>
+                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+                        <!-- 5 -->
+                           <div class="card shadow border-0 mb-5">
+                          <div class="card-body ">
+                            <h5 class="card-title h4 mb-3">Cashu 的神秘消費偵探</h5>
+                            <p class="body-2 text-neutral-400 mb-3">2025/07/20 ~ 2025/07/24 23:59</p>
+                            <p class="card-text body-2 mb-4 text-neutral-900 text-hidden">今天來當一次小偵探！找出一筆「奇怪」或「意外」的消費，幫它補上備註，Cashu 要追查你錢包裡的小祕密！</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>200</span></p>
+                              </div>
+                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+
+                </div>
+              </div>
+              <div class="tab-pane fade" id="conduct" role="tabpanel" aria-labelledby="conduct-tab">
+                <div class="container  bg-primary-50 ">
+                      <div class="container d-flex h-38 align-items-center justify-content-between">
+                        <h4 class="subheader-4">挑戰時間</h4>
+                        <p class="body-2 text-neutral-500">進行中</p>
+                      </div>
+                      </div>
+              </div>
+              <div class="tab-pane fade" id="finish" role="tabpanel" aria-labelledby="finish-tab">
+                <div class="container  bg-primary-50 ">
+                      <div class="container d-flex h-38 align-items-center justify-content-between">
+                        <h4 class="subheader-4">挑戰時間</h4>
+                        <p class="body-2">已結束</p>
+                      </div>
+                </div>
+              </div>
+            </div>
+        
+
+        <div class="offcanvas offcanvasBottom rounded-top" style="width: 375px;" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+          <div class="offcanvas-header pt-4 pb-0" >
+            <h5 class="offcanvas-title h2" style="padding: 12.5px 0px 12.5px 0px;" id="offcanvasTopLabel">手搖飲戒斷</h5>
+            <button type="button" class="btn-close p-12 " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body task pt-0">
+            <p class=" body-2 pt-1 text-neutral-400">2025/07/07 - 2026/07/08 23:59</p>
+            <p class="body-2 pt-3 text-neutral-900">放下身為台灣人的驕傲，每日拒絕手搖飲，改喝白開水或自帶飲品，不僅為身體減糖、減熱量，更為荷包省下銅板。透過這個任務，養成節制消費與健康飲食的雙重習慣，讓你在不知不覺中存到錢，也存回健康。完成任務還可拿到鑽石作為獎勵！</p>
+            <div class="py-4 px-5 my-6 bg-secondary-50 rounded-4">
+              <p class="body-3 text-center text-neutral-900 mb-3">任務達成獎勵</p>
+              <div class="  d-flex align-items-center justify-content-center "><img class="pe-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt=""><span class="h4 text-secondary-600 pe-2">+</span><span class="h4 text-secondary-600">200</span></div>
+            </div>
+            <div class="btn btn-primary rounded-pill" style="width: 100%; margin-bottom:36px;">參加挑戰</div>
+          </div>
+        </div>    
+
+<img
+  src="data:image/svg+xml,%3csvg%20width='343'%20height='34'%20viewBox='0%200%20343%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='144'%20height='5'%20rx='2.5'%20transform='matrix(-1%200%200%201%20244%2021)'%20fill='black'/%3e%3c/svg%3e"
+  alt="statusbar"
+  class="object-fit-cover fixed-bottom bottom-0 start-50 translate-middle-x"
+  style="z-index: 1050"
+/>
+    
+    </div>
+    
+  
+
+   
+  </body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <title>支出類別-CASHU</title>
+  <script type="module" crossorigin src="/CASHU/assets/main-DKZf0DiU.js"></script>
+  <link rel="stylesheet" crossorigin href="/CASHU/assets/main-COe7y4l1.css">
+</head>
+
+<body>
+  <div class="container-fluid px-0 mobile-frame position-relative overflow-y-auto bg-white vh-100 scroll-hidden">
+    <div class="fixed-height bg-gradient-vertical">
+
+      <!-- 載入畫面 -->
+      <section id="preloader" class="bg-white">
+        <div class="lodding d-flex flex-column justify-content-center align-items-center  ">
+          <img class="splash-screen " src="/CASHU/assets/splash-screen-Dr98GbFr.gif" alt="">
+          <img class="logo" src="data:image/png;base64,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" alt="">
+        </div>
+      </section>
+      <!-- 階段二 Lodding-->
+      <!-- 上方nav -->
+
+      <!-- 階段三 進入首頁 -->
+       <img
+  src="/CASHU/assets/Status%20bar-C_-zPuPq.svg"
+  alt="statusbar"
+  class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+  style="background-color: rgba(255, 255, 255, 0)"
+/>
+      <section>
+      <nav class="navbar user-nav pb-0">
+  <div class="container">
+    <span class="diamondcollect rounded-pill bg-white neutral-900 border subheader-3 d-flex align-items-center">
+      <img class="pe-2 " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt=""> 9999</span>
+    <a class="navbar-brand me-0 py-2" href="#">
+      <img class="user-img rounded-circle border" src="/CASHU/assets/2a6563ff68ae9c4e0a318c9dd97fa59388893096-BmnGe8R8.png" alt="user" width="44" height="44" >
+    </a>
+  </div>
+      </nav>
+      <!-- 主要區塊 -->
+      <main>
+        <!-- 提醒 -->
+         <section>
+          <div class="container d-flex align-items-center py-6">
+            <img src="/CASHU/assets/Static-5rachaQN.png" alt="Static">
+              <div class="Speech-bubble">
+                <p class="top-p mb-2"><span class="subheader-4 text-primary me-2">連續記帳已經</span>
+                  <img class="me-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFqSURBVHgBlVO9TgJBEP7m7kIoJGKMiY2Rhs5EYiWiCbwBPoGxNQTwCTje4BIgscQn4BFAlBgrLUwstFhiQaFGChv+bl33EDn2OGSSTXbm++ab3Z0dYIHx1lnMDyff5GYmDZ1qgsVAtknxyuVCAd7KWuB8FwP9GIFhTlDMPxAWHZbO5wrwm2wVxE/GngmipEhKztSoUqJ0qgjIyuA5/MemTiIF+HUmCY3qWMZsnqKjckOTjk4FLGvk5BCv58MIjD49ScOeWH0gGPIW6etrBoxhzLObr48Au3f20X1gM6pyAv2I5qn89QG83DnVf9ZTE+h2VB7pqxoMgylA51klv7XVWG/Q1ihuMdGHBxcQXFHJofXZCKPUBTPkdoQidNQm0NaOOPoAeB9X3dhW34DbprzFxL/NFGBPfVtf4yYlykWXgAzX8xHR0oL4aWmBhN056IqmN0T/LTooXf2G506jHGPxytIJ2oz2Km0v3jdHBHW9WZmJ9gAAAABJRU5ErkJggg==" alt="">
+                  <span class="text-primary h5">365 天</span>
+                </p>
+                <p class="buttom-p body-3">再 15 天即可領取額外獎勵！加油！</p>
+              </div>
+         </section>
+         <!-- 價格圓餅圖 -->
+         <section>
+          <div class="container ">
+            <div class="price">
+          <div class="accordion border-radius-xl" id="accordionExample">
+            <!-- 頂 -->
+            <div class="accordion-item shadow ">
+            <h2 class="accordion-header p-5">
+              <button class="accordion-button border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                <div>
+                <p class="subheader-4 text-neutral-400 mb-2">本月結餘</p>
+                <h1 class="h1 text-eutral-950">$ 45,500</h1>
+                </div>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse  container">
+              <div  class="accordion-body d-flex justify-content-center container flex-column">
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block" src="/CASHU/assets/Pie-chart-Bu6aK3i7.png" class="d-block " alt="Pie-chart">
+                  </div>
+                  <div class="carousel-item ">
+                    <img class="d-block" src="/CASHU/assets/Pie-chart-2-Cc_VjLQ_.png" class="d-block" alt="Pie-chart">
+                  </div>
+                </div>
+              
+                <div class="carousel-indicators">
+                  <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                      </button>
+                </div>
+    
+              </div>
+            </div>
+          <!--  -->
+          <div class="accordion-item shadow-3sides container bg-white">
+            <p class="accordion-header ">
+              <div class=" d-flex  py-5 border-top">
+               <div class="d-flex  border-end box-pay">
+              <img class="me-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAApCAYAAABHomvIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMiSURBVHgBzZjPThNRFMa/O0Nrja2ZihiLiEMUCaEi1bjQheLGjS4wLlyKb+Ar+AQ+gvUJxIWuSCwrNUSLFkOMJpSEAFFLJxETpMD13N7S8mdm6KENnV8Cc3t75vbrOeeeuT0CLshi1gLMERjiHA6DTfkZCE2JeH9+91sCO4TN2BDrz2k4jFYgRBqb5tPtQqsCZfHLKBk8o6GF1uJQ5J6I48kX6kVZoCzmhmn0FkFCrt8W8VRGC3SmZ+m/jUAh8pCllKlDi1EEDwuGsWRQ3j1CUJEYMegyhOAypAS2etf6YbXhoJT+1G9rhKnuH8FB4Ass5ICfH6n6r7FuQygKdFwF4n2s2wyW9d8FYOkdX5yitAIsTNAai6zbeAKV9xrF+cYy5wnc2Mdz398Dky+BdR+71WVw4AlUYfLj9xywQgIcnzBu/AMHpkCPnbtK89nXdK18gdw4kP/EW8MDnkAvsm/Ia0t63FYpJ7NZ4Necuz3Di/WXmTUf72157vpDIBLV4lYKQKzd/R5VBeqsiwcv1NUVtn3QDJWRKImKJ4CeFJpB4yFuo6eEfUWPVZjnv+ocnBzz3831Lo9mkLhAf7169xYXK7u5oHNQzbdUoBIxPa5zr2uAQnxCC1XeC4XRKI0LPBrVYVYb5ceH2nwkpvPRDaN+4fXnYDjmPq9EXLsPnO7VQhVdSZob0V51g3GyaU4dVEL6b9YEdnTXxrsxeWHnhTgU838SpO7qnLQS3jYG71zI8+B+uaM8eXbA38YrVbw+kmUdjqJhmCHmCXRL7pjtbX+sc+9ciPcleQIj28qGEnv+AdB9BziR3Gt7io739j3gzK2dXoucBAfeJrEuUr0r1ASEKvmUuKGvy9NaeHtS//4o39OnPTmfoZLUqddgIKSTk2gWm5VjFHOn+tGcZ/EWTRRWXRKq3RVcHCVwCsFlippHGENQMURalPvRwqQzurARKGReWIM9BnUxHUjxGEHD1D3LcqEW8UsZSKlEBmHDqB71qIgNTqgX1SeJiA+mqS+cosqYRuvIKA1bDXSFcLOivLRhmpcp9IfT3BTUj94ovSqn2y7+Axlm1Hm8L4/oAAAAAElFTkSuQmCC" alt="本月總支出">
+                 <div >
+                <p class="body-3 text-neutral-400 ">本月總支出</p>
+                <p class="h4 text-eutral-950 number text-truncate">$ 7,500</p>
+                </div>
+                </div>
+                 <div class="d-flex ps-5 box-pay">
+              <img class="me-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAYAAACoYAD2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJDSURBVHgB7ZnPThNBHMe/M1YkKcVtjEbFRDxoTGxB0YOeWBKPXjx60kfwBYz1EXwAD169ePABXOXAhQRKCSFcKBcgJGU3WUgKbDv8ZrtQWkqYKdtlSPpJtvNvp/12Zn6/mfyG4QyEW7LBMU5ZC73HQz0osuwLp1Mja68QbvEzGP+KZMS1wco0MAU2nPvZUotjcXMWWOo3ZW1cPg5E8J5G1pMFflxtjkCJHekJCUUKd+ETzBF4hB0uPUTTLbzFVfochXl4zMpnWWjFDH9hKiKY4pGbMReeGpdr8hJcjRYWxxXgSohMoRu2ZoHdDeBgR+39Wzl68ugWPZG1PaD8B6hua3WDv5agyM2ZVoF+hYTvn99P3MBFUBe575NrXWmWNyi/PK3Wd2QCyH1Et6iLrFZay9n7wINnQKAwkukM4NKfGqA0fQ+6qItsn9bBIeDxayiz7jTSu2+012fyLqiyCF36zjwuunPmOlT91nKNHp82goy6AfVWpLT8mV+n6///AN5+AZ6+gwq9ne5gD3HQX5MYzJx2+Ndoixx+SLvQS+Wv6b3htDv86yT8yQfo0PeTcaEucmAIsSAPGZqor8k0nXpuTzQOsCpnyE5IgSOT0EXPcO68ajwJ0zecuJAiPZiNx1FHESbDxXwUVSu5MDLcIsrMGnvUWJOi/g0mwnlBJs1wtFeS4T8b5uBQbHJKZprWTTFq2QAzcCI9IR1uHyg0zUC3D2wUyePRbxfYzfz3k5XsrLeFvzSJeu05krrHkVacGfvXqfEQ11GU1SOpjo8AAAAASUVORK5CYII=" alt="本月總收入">
+                 <div>
+                <p class="body-3 text-neutral-400">本月總收入</p>
+                <p class="h4 text-eutral-950 text-truncate number">$ 54,000</p>
+                </div>
+                </div>
+                </div>
+              </p>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+         </section>
+        <!-- 今日任務 -->
+         <section>
+          <div class="container py-6  ">
+            <div class="d-flex justify-content-between mb-5 ">
+            <h2 class="h4 mb-0">今日任務</h2>
+            <a class="body-2 d-flex align-items-center text-neutral-500 gap-2 " href="#">查看更多 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACmSURBVHgBzZKxDcMgEEXByTyIERghAwBhhGyQZIJ4hUhQZ4W4c2tYwHsggY/Wwubc+TeH7ngPCSDklDHGcCnlDbO3qzVjjIJS+tNa30kjl1ozhDAyxsqy55zPE+SQoMR7P2AkmwKsZFeAkXQEEWvtG8o/59yvZ1eMAF7jBbBIKZn1jCLhZ4Gdc99Dgha8K8DAmwKl1APKpwWXVC8RTp7hKwuAB3L6LNISawY4nSJMAAAAAElFTkSuQmCC" alt=""></a>
+            </div>
+          <div class="card shadow border-0 mb-5">
+  <div class="card-body  ">
+    <h5 class="card-title h4 mb-3 text-neutral-950">記帳一筆</h5>
+    <p class="card-text body-2 mb-4 text-neutral-900">記錄每一筆支出，養成每日記帳的好習慣，讓金錢流向更清楚，財務管理更輕鬆！</p>
+    <div class="d-flex justify-content-between ">
+      <div class="d-flex justify-content-center align-items-center">
+        <img  class="reward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt="Reward">
+        <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>200</span></p>
+      </div>
+    <a class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4" href="log-add.html">參加挑戰</a>
+  </div>
+  </div>  
+</div>
+
+<div class="card shadow border-0 mb-5">
+  <div class="card-body  ">
+    <h5 class="card-title h4 mb-3 text-neutral-950">打開 APP 看看</h5>
+    <p class="card-text body-2 mb-4 text-neutral-900">每天開一次 APP，看看帳本有沒有變胖～理財習慣就從這一步開始！</p>
+    <div class="d-flex justify-content-between ">
+      <div class="d-flex justify-content-center align-items-center">
+        <img  class="reward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt="Reward">
+        <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>100</span></p>
+      </div>
+    <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4 " disabled>已完成</button>
+  </div>
+  </div>  
+</div>
+
+<div class="card shadow border-0 mb-13">
+  <div class="card-body  ">
+    <h5 class="card-title h4 mb-3 text-neutral-950">連續記帳挑戰第 365 天</h5>
+    <p class="card-text body-2 mb-4 text-neutral-900">達成連續記帳挑戰第 365 天！再 15 天即可解鎖專屬勳章！🏅</p>
+    <div class="d-flex justify-content-between ">
+      <div class="d-flex justify-content-center align-items-center">
+        <img  class="reward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJNSURBVHgB7ZRBT9RAFMfftN3IgraVNQseCiRmMUY9ePCgHtioX8AQjIkXOBiPxvgBtnwCDQeP4skYicGbGg5yMRwM0QQOJl1T2GJcN66wTZaFXdhx3ii1nbZbSDjyT7pp38z8fzPz3luAIyWIRAVnHCtPKR3C92q9Ds/m5uHe9Tzoag8ft76X4c2nxUCMELIyZuTmRS9FDLxetUygpLDH3mo0QZIJKCkFZJB47PRJncfqrSZk4MTfhZSvfTg6mHvi95P8H7O2PUSI9MAfc6pV0Lq7QUunvRj/Zk+l5gZ3R0hh2v6sxwLacrtAgQYmlBggq6ogyujt5XBBuiqrjyMBuHt2znFxRaVWAyOTEcOQ1VQOD4uOz9hWPgSgyu50lPn2zg70aeETZFUNtlstqG1uhsaIjDn8944/j+be5tnVfBAn4uLltTW4NjwcMtli5ou2Dbn+/sgr/L2+fun57btfeBV9LH5dUbt6Ik1QCIlTxXX5I8rdqG94J0DNrn4rtAk1RcDUu/dw5+oVGBDyUPpVhZcLC3D/5o1AhXFRYo4OnpnEVy8Ht1hAYgP+eV2pFE9wsfwztMNlx2GJ1jqaBwBxENz5EjMThRUknko0DwGiIHgCrBZ/SWJ1uY0GS3BfR/NIgAgZOJWBY4oSaCqLXRl2stcfMeaxABFywTB4Uv8Dyvsy7wjwQ7DW8QTYdNgbWJYYSzJPBOxB9PRxE69pqeR4uWDdnWi+LwBq4tz5yWZ718SrKf4os39mYk6cvZhofmCNvXoxcvnp1Agc6TD1B7Ux/H5Z3QaRAAAAAElFTkSuQmCC" alt="Reward">
+        <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>50</span></p>
+      </div>
+    <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4" disabled>已完成</button>
+  </div>
+  </div>  
+</div>
+
+
+
+            </div>
+          </section>
+        </main>
+        <!-- nav -->
+        <nav>
+          <div class="nav-bottom pt-3 ">
+            <ul class="nav justify-content-center pb-4">
+              <li class="nav-item item-home">
+                <a class="nav-link p-0 text-center" href="index.html">
+                  <span class="Icon-home"></span><span class="d-block body-2 home">首頁</span></a>
+              </li>
+              <li class="nav-item item-plan">
+                <a class="nav-link p-0 text-center" href="plan-save-detail.html">
+                  <span class="Icon-plan"></span><span class="d-block body-2 plan">計畫</span></a>
+              </li>
+              <li class="nav-item item-State">
+                <a class="nav-link p-0" href="log-add.html">
+                  <img class="d-block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQISURBVHgB5ZtPTttAFMY/T+i/TRXEAQonAE7QIHVPd12SFiJV6oLkBIQTNCwqVaWIdMeSHqAqnIBwAtJ9q2RRCdomcb83sfOHOInt2E5s/ySTCXaivDffzLyZN2MgZBpvsYq/yGEJ6+iwDF4msjB0uY+JOv/XZKnOq8b313iA2vJH/T40DIRAY48GK2yjjZcjhnqnxu8Qh3xZ/owLBExgDmgUWau/UeQP3QnAaGcM1DMGym2Fy6CUMbMDeoYD+7yyiAI6QhTBZlWd1REzOYBSF8MPEJXh97EU8fQTneH7K3ygO7YWTlnMYREQRWSw5UcNCh7Rtd7CFRbFeMHUFXJlKdITnhTQ2EWFn9jHYnPI0aLs9mHXDqDxVT69gzhgsnM8wWs3j7pyQKNAyZvYQLyoUQmb0x6a2gfomo+f8cIGf/vptIcmOoCdSjk2snfCQJ42vJ/8yBisHnXih2NEic2h4nTD0QHWOC9D3XwCnOBpMmrcdIoTnJtAG9+RHOOFrBW4jTDiAPb4eR1YJI+cU6A01AS09KX2k+kAoUklrC1X9bqDZlgBrcTWvk2WfcFQJNtTQApq32ZIBX0FtDm5idj4Ry+K+oqYIRX0FVDATdQOyB6b+rVZCGVlbjxcf+RcYU2KWgF6DS/50u/DJTttM+wmEOdw1z/b8qfrgHhOdmbD5Io1Ubr3RwodwGZw+w7PFP6l0HiLuzvkFD2xjrRiYEP6gNQqgKyKA1aRXugAM1HTXm/QdhVaHi8O0HaDEZGJgJC4/smrcFfRbs9K+POtgqDwnBmaP4HVlyZQBXhlbpOhAZTemZFWaLuytqWkE9oufUAd6aWedgfUVLuDa6SXmso8DH7nVWxo4VrpdFE6R4IaV4br9pLYOdKGiZq82JHgV6QNhWr3hegdmGlqBrIsfoxLKS71/mloj5QRIbdnkSdFbMp2oZ8YyeuMyQ2SlRYfRZTexpZ0gPK2Nxu0cmXBzTMXFSrdNl64nx0+AhI8N5Dabw1vqx1ygKigAxwiuZQHa19w3iO0p7fI5JAkBhKigzivCLX0LsvkNAWTtrDjc7rl6ACRSaKaghqVfv/WGFa6++qSMCqUGfQcjbs5dTHu1y6qKq7pcxebpt1tlt7TmybTuVlakC/qmP6PpUSO1LwL4wXXeYGVE+QR8VzBJxW3ZwUET4kRevWQo0MJizhEylBnoMjfWPLyMX+HpvLMJ2YYLC1OXvFCYpdxQ90kZkrJ/HyDfMbAwdwcIbWuJg9z05j94KSoYYnDpMk+IipHdOVekcnb4L5fPwR3dJaOaCvkQlVE94B1NQjDbcI5PF3Ac3S0IiR2mC1+6Bp9Lpe9jBUkoadlrSYiG7FsZ7g5Pl/Xq7aPcbH8AT8QIv8BmCA9hXG65mEAAAAASUVORK5CYII=" alt="State-Default" /></a>
+              </li>
+              <li class="nav-item item-ledger">
+                <a class="nav-link p-0 text-center" href="book.html">
+                  <span class="ledger-icon"></span><span class="d-block body-2 ledger">帳本</span></a>
+              </li>
+              <li class="nav-item item-assets">
+                <a class="nav-link p-0 text-center" href="#">
+                  <span class="assets-icon"></span><span class="d-block body-2 assets">資產</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+
+    </div>
+  </div>
+
+  <img
+  src="data:image/svg+xml,%3csvg%20width='343'%20height='34'%20viewBox='0%200%20343%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='144'%20height='5'%20rx='2.5'%20transform='matrix(-1%200%200%201%20244%2021)'%20fill='black'/%3e%3c/svg%3e"
+  alt="statusbar"
+  class="object-fit-cover fixed-bottom bottom-0 start-50 translate-middle-x"
+  style="z-index: 1050"
+/>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname; // 取得目前網址路徑
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          // 如果 a 的 href 包含目前的 path，就加 active
+          if (currentPath.includes(link.getAttribute("href"))) {
+            link.classList.add("active");
+          }
+        });
+      });
+      
+    </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-bottom .nav-link");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        // 先清掉全部 active
+        navLinks.forEach(l => l.classList.remove("active"));
+        
+        // 再加到被點擊的 link
+        link.classList.add("active");
+      });
+    });
+  });
+</script>
+
+    <script>
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+
+        // 先加淡出 class
+        preloader.classList.add("fade-out");
+
+        // 動畫結束後移除元素（避免佔 DOM）
+        preloader.addEventListener("transitionend", () => {
+          preloader.remove();
+        });
+      });
+    </script>
+    <script>
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+
+  // 延遲 7 秒後執行淡出
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+
+    // 等淡出動畫結束再移除
+    preloader.addEventListener("transitionend", () => {
+      preloader.remove();
+    });
+  }, 4500); // 7000 毫秒 = 7 秒
+});
+</script>
+
+
+
+</body>
+
+</html>

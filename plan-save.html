@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <title>存錢計畫-CASHU</title>
+    <script type="module" crossorigin src="/CASHU/assets/main-DKZf0DiU.js"></script>
+    <link rel="stylesheet" crossorigin href="/CASHU/assets/main-COe7y4l1.css">
+  </head>
+
+  <body>
+    <div class="mobile-frame bg-white position-relative">
+      <img
+  src="/CASHU/assets/Status%20bar-C_-zPuPq.svg"
+  alt="statusbar"
+  class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+  style="background-color: rgba(255, 255, 255, 0.625)"
+/>
+      <div class="container-fluid" style="margin-bottom: 106px">
+        <main style="padding-top: 50px">
+          <div class="py-4 d-flex justify-content-between align-items-center">
+            <a href="plan-save-detail.html">
+              <i data-lucide="chevron-left" class="icon-24 text-neutral-600"></i
+            ></a>
+            <span class="h2 fw-bold">存錢計畫</span>
+            <i data-lucide="pencil" class="icon-24 text-neutral-600"></i>
+          </div>
+          <section class="d-flex align-items-center py-5 px-6">
+            <span
+              class="icon-120 secondary-icon d-flex justify-content-center align-items-center me-6"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20width='70'%20height='70'%20viewBox='0%200%2070%2070'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M42.0406%202.91669H27.959L19.209%2011.6667L32.9377%2025.3954H37.0619L50.7906%2011.6667L42.0406%202.91669Z'%20fill='%23379590'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M34.9998%2026.25C30.3585%2026.25%2025.9074%2028.0938%2022.6255%2031.3757C19.3436%2034.6575%2017.4998%2039.1087%2017.4998%2043.75C17.4998%2048.3913%2019.3436%2052.8425%2022.6255%2056.1244C25.9074%2059.4063%2030.3585%2061.25%2034.9998%2061.25C39.6411%2061.25%2044.0923%2059.4063%2047.3742%2056.1244C50.6561%2052.8425%2052.4998%2048.3913%2052.4998%2043.75C52.4998%2039.1087%2050.6561%2034.6575%2047.3742%2031.3757C44.0923%2028.0938%2039.6411%2026.25%2034.9998%2026.25ZM11.6665%2043.75C11.6665%2037.5616%2014.1248%2031.6267%2018.5007%2027.2509C22.8765%2022.875%2028.8115%2020.4167%2034.9998%2020.4167C41.1882%2020.4167%2047.1231%2022.875%2051.499%2027.2509C55.8748%2031.6267%2058.3332%2037.5616%2058.3332%2043.75C58.3332%2049.9384%2055.8748%2055.8733%2051.499%2060.2492C47.1231%2064.625%2041.1882%2067.0834%2034.9998%2067.0834C28.8115%2067.0834%2022.8765%2064.625%2018.5007%2060.2492C14.1248%2055.8733%2011.6665%2049.9384%2011.6665%2043.75Z'%20fill='%23ADE2DC'/%3e%3c/svg%3e"
+                alt="wedding-icon"
+              />
+            </span>
+            <div>
+              <h1 class="mb-4">結婚基金</h1>
+              <div>
+                <div class="mb-2">
+                  <span class="subheader-3 me-3 text-neutral-400"
+                    >目標金額</span
+                  >
+                  <span class="h4">$ 200,000</span>
+                </div>
+                <div>
+                  <span class="subheader-3 me-3 text-neutral-400"
+                    >目前存入</span
+                  >
+                  <span class="h4 text-secondary-600">$ 46,700</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="py-6">
+            <div class="card rounded-m overflow-hidden border-0 shadow d-flex">
+              <div
+                class="bg-gradient-horizontal p-5 d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex align-items-center">
+                  <span
+                    class="me-4 icon-48 rounded-circle bg-white d-flex align-items-center justify-content-center"
+                    ><img
+                      src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.8764%204.66296C11.136%204.66296%209.80306%204.701%208.22284%204.81659V3.09737C8.22284%202.80633%208.10722%202.52721%207.90143%202.32141C7.69563%202.11562%207.41651%202%207.12547%202C6.83442%202%206.5553%202.11562%206.34951%202.32141C6.14371%202.52721%206.02809%202.80633%206.02809%203.09737V5.03168C5.01286%205.22207%204.08811%205.74022%203.39566%206.50668C2.70321%207.27313%202.28128%208.24557%202.1946%209.27486C2.07827%2010.6243%202.01335%2011.9778%202%2013.3322C2%2014.0579%202.04536%2015.644%202.1946%2017.3881C2.28826%2018.4891%202.76477%2019.5225%203.5413%2020.3087C4.31783%2021.0949%205.3453%2021.5841%206.4451%2021.6913C8.77153%2021.9298%2010.8712%2022%2011.8764%2022C12.8816%2022%2014.9812%2021.9298%2017.3076%2021.6927C18.4077%2021.5855%2019.4353%2021.0961%2020.2119%2020.3096C20.9884%2019.5232%2021.4648%2018.4894%2021.5581%2017.3881C21.6745%2016.0391%2021.7394%2014.6862%2021.7527%2013.3322C21.7527%2012.6065%2021.7074%2011.0189%2021.5581%209.27339C21.4712%208.24241%2021.0479%207.26854%2020.3534%206.50162C19.659%205.7347%2018.7317%205.2172%2017.7144%205.02875V3.09737C17.7144%202.80633%2017.5988%202.52721%2017.393%202.32141C17.1872%202.11562%2016.9081%202%2016.617%202C16.326%202%2016.0469%202.11562%2015.8411%202.32141C15.6353%202.52721%2015.5196%202.80633%2015.5196%203.09737V4.81513C14.3073%204.72358%2013.0922%204.67282%2011.8764%204.66296Z'%20fill='%23ADE2DC'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5.84131%2010.8507C5.84131%2010.3459%206.25099%209.93622%206.75579%209.93622H7.48737C7.7299%209.93622%207.9625%2010.0326%208.134%2010.2041C8.3055%2010.3756%208.40185%2010.6082%208.40185%2010.8507C8.40185%2011.0932%208.3055%2011.3258%208.134%2011.4973C7.9625%2011.6688%207.7299%2011.7652%207.48737%2011.7652H6.75579C6.51325%2011.7652%206.28065%2011.6688%206.10915%2011.4973C5.93766%2011.3258%205.84131%2011.0932%205.84131%2010.8507ZM5.84131%2015.2402C5.84131%2014.7354%206.25099%2014.3257%206.75579%2014.3257H7.48737C7.7299%2014.3257%207.9625%2014.4221%208.134%2014.5936C8.3055%2014.7651%208.40185%2014.9977%208.40185%2015.2402C8.40185%2015.4827%208.3055%2015.7153%208.134%2015.8868C7.9625%2016.0583%207.7299%2016.1547%207.48737%2016.1547H6.75579C6.51325%2016.1547%206.28065%2016.0583%206.10915%2015.8868C5.93766%2015.7153%205.84131%2015.4827%205.84131%2015.2402ZM11.5111%209.93768C11.2685%209.93768%2011.0359%2010.034%2010.8644%2010.2055C10.6929%2010.377%2010.5966%2010.6096%2010.5966%2010.8522C10.5966%2011.0947%2010.6929%2011.3273%2010.8644%2011.4988C11.0359%2011.6703%2011.2685%2011.7666%2011.5111%2011.7666H12.2427C12.4852%2011.7666%2012.7178%2011.6703%2012.8893%2011.4988C13.0608%2011.3273%2013.1571%2011.0947%2013.1571%2010.8522C13.1571%2010.6096%2013.0608%2010.377%2012.8893%2010.2055C12.7178%2010.034%2012.4852%209.93768%2012.2427%209.93768H11.5111ZM15.3519%2010.8522C15.3519%2010.3474%2015.7616%209.93768%2016.2664%209.93768H16.9979C17.2405%209.93768%2017.4731%2010.034%2017.6446%2010.2055C17.8161%2010.377%2017.9124%2010.6096%2017.9124%2010.8522C17.9124%2011.0947%2017.8161%2011.3273%2017.6446%2011.4988C17.4731%2011.6703%2017.2405%2011.7666%2016.9979%2011.7666H16.2664C16.0238%2011.7666%2015.7912%2011.6703%2015.6197%2011.4988C15.4482%2011.3273%2015.3519%2011.0947%2015.3519%2010.8522ZM11.5111%2014.3272C11.2685%2014.3272%2011.0359%2014.4235%2010.8644%2014.595C10.6929%2014.7665%2010.5966%2014.9991%2010.5966%2015.2417C10.5966%2015.4842%2010.6929%2015.7168%2010.8644%2015.8883C11.0359%2016.0598%2011.2685%2016.1561%2011.5111%2016.1561H12.2427C12.4852%2016.1561%2012.7178%2016.0598%2012.8893%2015.8883C13.0608%2015.7168%2013.1571%2015.4842%2013.1571%2015.2417C13.1571%2014.9991%2013.0608%2014.7665%2012.8893%2014.595C12.7178%2014.4235%2012.4852%2014.3272%2012.2427%2014.3272H11.5111Z'%20fill='%23379590'/%3e%3c/svg%3e"
+                      alt="calender-icon"
+                  /></span>
+                  <div>
+                    <p class="body-3 mb-2 text-neutral-400">預計完成日</p>
+                    <p class="subheader-4">2028/08/20</p>
+                  </div>
+                </div>
+                <div>
+                  <p class="body-3 mb-2 text-neutral-400">距結束剩</p>
+                  <p class="subheader-4">6209天</p>
+                </div>
+              </div>
+              <div class="card-body py-7 p-6">
+                <div class="card-text">
+                  <div class="mb-8">
+                    <div class="d-flex justify-content-between mb-6">
+                      <div>
+                        <p class="body-2 text-neutral-400">已存</p>
+                        <p class="h4 text-secondary-600">$ 46,700</p>
+                      </div>
+                      <div>
+                        <p class="body-2 text-neutral-400 text-end">目標</p>
+                        <p class="h4">$ 200,000</p>
+                      </div>
+                    </div>
+                    <div class="progress rounded-pill" style="height: 12px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 7%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary h-44 d-flex align-items-center justify-content-center rounded-pill h4"
+                        >取用</a
+                      >
+                    </div>
+                    <div class="col-6">
+                      <button
+                        type="button"
+                        class="btn btn-primary h-44 d-flex align-items-center justify-content-center rounded-pill h4 open-calculator-btn w-100"
+                      >
+                        存入
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="py-5">
+            <h4 class="mb-6">存錢紀錄</h4>
+            <ul>
+              <li
+                class="d-flex align-items-center justify-content-between mb-5"
+              >
+                <div class="d-flex flex-column">
+                  <time datetime="2025-07-18" class="body-1 mb-2"
+                    >2025/07/18</time
+                  >
+                  <p class="body-2 text-neutral-600">手動轉出至現金帳戶</p>
+                </div>
+                <p class="text-state-negative-500 subheader-3">-$ 500</p>
+              </li>
+              <li
+                class="d-flex align-items-center justify-content-between mb-5"
+              >
+                <div class="d-flex flex-column">
+                  <time datetime="2025-07-14" class="body-1 mb-2"
+                    >2025/07/14</time
+                  >
+                  <p class="body-2 text-neutral-600">手動從台新帳戶存入</p>
+                </div>
+                <p class="subheader-3">$ 22,200</p>
+              </li>
+              <li class="d-flex align-items-center justify-content-between">
+                <div class="d-flex flex-column">
+                  <time datetime="2025-07-10" class="body-1 mb-2"
+                    >2025/07/10</time
+                  >
+                  <p class="body-2 text-neutral-600">
+                    每月10日從台新帳戶定期存入
+                  </p>
+                </div>
+                <p class="subheader-3">$ 25,000</p>
+              </li>
+            </ul>
+          </section>
+          <img
+  src="data:image/svg+xml,%3csvg%20width='343'%20height='34'%20viewBox='0%200%20343%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='144'%20height='5'%20rx='2.5'%20transform='matrix(-1%200%200%201%20244%2021)'%20fill='black'/%3e%3c/svg%3e"
+  alt="statusbar"
+  class="object-fit-cover fixed-bottom bottom-0 start-50 translate-middle-x"
+  style="z-index: 1050"
+/>
+        </main>
+
+        <!-- 按鈕 -->
+        <div class="calc-backdrop" id="calcBackdrop"></div>
+        <!--底部彈開按鈕+計算機-->
+        <div class="mobile-frame-container">
+          <!-- 新計算機 -->
+          <div
+            class="mobile-calculator"
+            id="calculatorContainer"
+            style="display: none"
+          >
+            <div class="calculator-full">
+              <div
+                class="d-flex justify-content-between align-items-center mb-6"
+              >
+                <h4>存入結婚基金</h4>
+                <span class="close-calculator" onclick="closeCalculator()">
+                  <i
+                    data-lucide="x"
+                    class="icon-44 text-neutral-600"
+                    style="padding: 10px"
+                  ></i>
+                </span>
+              </div>
+              <div class="calculator-header row mb-4">
+                <div class="col-12">
+                  <div class="position-relative">
+                    <input
+                      type="text"
+                      id="consult_datetime"
+                      class="form-control py-4 px-5 h-44 subheader-3"
+                      readonly
+                      inputmode="none"
+                    />
+                    <span
+                      id="calendar_icon"
+                      class="calendar_icon position-absolute top-50 end-0 translate-middle-y me-5"
+                      style="cursor: pointer"
+                    >
+                      <i data-lucide="calendar" class="text-neutral-300"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="position-relative">
+                    <button
+                      type="button"
+                      class="btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium active"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight"
+                      aria-controls="offcanvasRight"
+                    >
+                      現金
+                      <span
+                        class="position-absolute top-50 end-0 translate-middle-y me-5"
+                        style="cursor: pointer"
+                      >
+                        <i data-lucide="chevron-right"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form-control h-44 calc-input text-end text-neutral-900"
+                    inputmode="none"
+                    placeholder="$0"
+                    readonly
+                  />
+                </div>
+              </div>
+
+              <div class="calculator-grid">
+                <button class="calc-btn number" onclick="inputNumber('7')">
+                  7
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('8')">
+                  8
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('9')">
+                  9
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('÷')">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%2012H19M13%206C13%206.55228%2012.5523%207%2012%207C11.4477%207%2011%206.55228%2011%206C11%205.44772%2011.4477%205%2012%205C12.5523%205%2013%205.44772%2013%206ZM13%2018C13%2018.5523%2012.5523%2019%2012%2019C11.4477%2019%2011%2018.5523%2011%2018C11%2017.4477%2011.4477%2017%2012%2017C12.5523%2017%2013%2017.4477%2013%2018Z'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Divide"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn function" onclick="clearAll()">
+                  AC
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('4')">
+                  4
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('5')">
+                  5
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('6')">
+                  6
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('×')">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M18%206L6%2018M6%206L18%2018'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Multiply"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn function" onclick="backspace()">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.9999%209L17.9999%2015M17.9999%209L11.9999%2015M9.99994%205C9.50302%205.00003%209.02391%205.18504%208.65594%205.519L2.32794%2011.259C2.22466%2011.3527%202.14213%2011.467%202.08565%2011.5946C2.02918%2011.7221%202%2011.86%202%2011.9995C2%2012.139%202.02918%2012.2769%202.08565%2012.4044C2.14213%2012.532%202.22466%2012.6463%202.32794%2012.74L8.65594%2018.481C9.02391%2018.815%209.50302%2019%209.99994%2019H19.9999C20.5304%2019%2021.0391%2018.7893%2021.4142%2018.4142C21.7892%2018.0391%2021.9999%2017.5304%2021.9999%2017V7C21.9999%206.46957%2021.7892%205.96086%2021.4142%205.58579C21.0391%205.21071%2020.5304%205%2019.9999%205H9.99994Z'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Backspace"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('1')">
+                  1
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('2')">
+                  2
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('3')">
+                  3
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('-')">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%2012H19'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Minus"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button
+                  class="calc-btn function subheader-4"
+                  onclick="memory()"
+                >
+                  再存
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('00')">
+                  00
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('0')">
+                  0
+                </button>
+                <button class="calc-btn number" onclick="inputOperator('.')">
+                  .
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('+')">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%2012H19M12%205V19'%20stroke='%231A1A1A'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Plus"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn equals" onclick="calculate()">
+                  <a href="plan-save-success.html">
+                    <i data-lucide="check"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side">
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-body">
+              <div
+                class="py-4 d-flex justify-content-between align-items-start"
+              >
+                <button
+                  type="button"
+                  class="btn p-0"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <i
+                    data-lucide="chevron-left"
+                    class="icon-24 text-neutral-600"
+                  ></i>
+                </button>
+
+                <span class="h2 fw-bold">選擇帳戶</span>
+                <i
+                  data-lucide="chevron-right"
+                  class="icon-24 icon-transparent"
+                ></i>
+              </div>
+              <div class="mb-4">
+                <p
+                  class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
+                  style="padding: 5.5px 0"
+                >
+                  現金
+                </p>
+                <ul class="m-0">
+                  <li class="add-item">
+                    <a
+                      class="d-block py-3 px-5 active"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2%2012C2%2017.5227%206.47733%2022%2012%2022C17.5227%2022%2022%2017.5227%2022%2012C22%206.47689%2017.5227%202%2012%202C6.47733%202%202%206.47689%202%2012Z'%20fill='%23FFC56D'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.9999%2019.7778C7.70439%2019.7778%204.22217%2016.2956%204.22217%2012C4.22217%207.70444%207.70439%204.22222%2011.9999%204.22222C16.2955%204.22222%2019.7777%207.70444%2019.7777%2012C19.7777%2016.2956%2016.2955%2019.7778%2011.9999%2019.7778ZM12.7777%207.09111C12.7777%206.88483%2012.6958%206.687%2012.5499%206.54114C12.4041%206.39528%2012.2062%206.31333%2011.9999%206.31333C11.7937%206.31333%2011.5958%206.39528%2011.45%206.54114C11.3041%206.687%2011.2222%206.88483%2011.2222%207.09111V7.85822C10.7466%207.9509%2010.2935%208.13488%209.88795%208.4C9.30128%208.79111%208.77772%209.42978%208.77772%2010.2693C8.77772%2010.7124%208.89106%2011.1116%209.12039%2011.452C9.34439%2011.7853%209.64706%2012.0142%209.95328%2012.1778C10.5146%2012.4769%2011.2222%2012.6178%2011.7888%2012.7311L11.8475%2012.7431C12.4933%2012.872%2012.9782%2012.976%2013.3142%2013.1556C13.4666%2013.2364%2013.5457%2013.3129%2013.5893%2013.3773C13.6275%2013.4338%2013.6666%2013.5236%2013.6666%2013.6916C13.6666%2013.8293%2013.5791%2014.0467%2013.2488%2014.2667C12.9328%2014.4773%2012.4857%2014.6191%2012.0284%2014.6244C12.0088%2014.6237%2011.9893%2014.6237%2011.9697%2014.6244C11.4759%2014.619%2010.9879%2014.5159%2010.5342%2014.3209C10.3955%2014.262%2010.261%2014.1938%2010.1315%2014.1169L10.0182%2014.044C9.85253%2013.9244%209.64648%2013.8748%209.44457%2013.9059C9.24265%2013.937%209.06106%2014.0463%208.93906%2014.2101C8.81705%2014.374%208.76441%2014.5793%208.79252%2014.7816C8.82063%2014.984%208.92723%2015.1671%209.08928%2015.2916L9.08972%2015.292L9.09061%2015.2929C9.16795%2015.3502%209.24884%2015.4013%209.33106%2015.4507C9.4715%2015.5351%209.67106%2015.6436%209.92128%2015.7507C10.2617%2015.8964%2010.7026%2016.0431%2011.2222%2016.1218V16.8684C11.2222%2017.0747%2011.3041%2017.2726%2011.45%2017.4184C11.5958%2017.5643%2011.7937%2017.6462%2011.9999%2017.6462C12.2062%2017.6462%2012.4041%2017.5643%2012.5499%2017.4184C12.6958%2017.2726%2012.7777%2017.0747%2012.7777%2016.8684V16.1027C13.2533%2016.0098%2013.7064%2015.8257%2014.1119%2015.5604C14.6986%2015.1698%2015.2222%2014.5311%2015.2222%2013.6916C15.2222%2013.2484%2015.1088%2012.8489%2014.8799%2012.5084C14.6555%2012.1756%2014.3528%2011.9462%2014.0466%2011.7831C13.4857%2011.4836%2012.7782%2011.3427%2012.2111%2011.2293L12.1524%2011.2178C11.5066%2011.0889%2011.0217%2010.9844%2010.6857%2010.8053C10.5333%2010.724%2010.4542%2010.648%2010.4106%2010.5836C10.3728%2010.5267%2010.3333%2010.4369%2010.3333%2010.2693C10.3333%2010.1311%2010.4208%209.91422%2010.7511%209.69422C11.0737%209.47911%2011.5333%209.336%2011.9999%209.336C12.6035%209.336%2013.1097%209.48711%2013.4657%209.63955C13.6435%209.71555%2013.7799%209.79067%2013.8684%209.844C13.9066%209.86678%2013.9441%209.89079%2013.9808%209.916L13.9817%209.91644C14.1474%2010.0352%2014.353%2010.0843%2014.5544%2010.053C14.7558%2010.0217%2014.9369%209.91258%2015.0587%209.74915C15.1805%209.58571%2015.2332%209.38101%2015.2056%209.17906C15.178%208.97712%2015.0722%208.79408%2014.9111%208.66933L14.9102%208.66844L14.9093%208.66756L14.9071%208.66622C14.8302%208.61034%2014.7507%208.55813%2014.6688%208.50978C14.5284%208.42533%2014.3293%208.31733%2014.0786%208.20978C13.6624%208.03159%2013.2253%207.90704%2012.7777%207.83911V7.09111Z'%20fill='%23FF840A'/%3e%3c/svg%3e"
+                            alt="現金icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">現金</p>
+                        <p class="ms-auto line-height-sm fw-medium">$ 20,000</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <p
+                  class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
+                  style="padding: 5.5px 0"
+                >
+                  銀行
+                </p>
+                <ul class="m-0">
+                  <li class="add-item mb-2">
+                    <a
+                      class="d-block py-3 px-5"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M16.6919%2010.4771V17.6971H20.4976V10.4756L20.4433%2010.4771H16.6919Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M10.0972%2010.4771V17.6971H13.9029V10.4771H10.0972Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M3.50244%2010.4756V17.6971H7.30816V10.4771H3.55673L3.50244%2010.4756Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.1229%202.33278C11.3937%202.17358%2011.7027%202.09119%2012.0169%202.09446C12.331%202.09773%2012.6383%202.18655%2012.9057%202.35135L21.35%207.87992C21.95%208.27564%2022.1314%208.95706%2021.9%209.53849C21.6771%2010.0985%2021.1143%2010.4771%2020.4429%2010.4771H3.55714C2.88571%2010.4771%202.32286%2010.0985%202.1%209.53849C1.86857%208.95706%202.05143%208.27564%202.65%207.88135L2.65143%207.87992L11.0943%202.35135C11.1037%202.34493%2011.1132%202.33874%2011.1229%202.33278ZM2%2018.9671C2%2018.1099%202.81714%2017.6971%203.42857%2017.6971H20.5714C21.1829%2017.6971%2022%2018.1099%2022%2018.9685V20.6356C22%2021.4928%2021.1829%2021.9056%2020.5714%2021.9056H3.42857C2.81714%2021.9056%202%2021.4928%202%2020.6342V18.9671Z'%20fill='%23FFC56D'/%3e%3c/svg%3e"
+                            alt="銀行icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">台新銀行</p>
+                        <p class="ms-auto line-height-sm fw-medium">
+                          $ 100,000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="add-item mb-2">
+                    <a
+                      class="d-block py-3 px-5"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M16.6919%2010.4771V17.6971H20.4976V10.4756L20.4433%2010.4771H16.6919Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M10.0972%2010.4771V17.6971H13.9029V10.4771H10.0972Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M3.50244%2010.4756V17.6971H7.30816V10.4771H3.55673L3.50244%2010.4756Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.1229%202.33278C11.3937%202.17358%2011.7027%202.09119%2012.0169%202.09446C12.331%202.09773%2012.6383%202.18655%2012.9057%202.35135L21.35%207.87992C21.95%208.27564%2022.1314%208.95706%2021.9%209.53849C21.6771%2010.0985%2021.1143%2010.4771%2020.4429%2010.4771H3.55714C2.88571%2010.4771%202.32286%2010.0985%202.1%209.53849C1.86857%208.95706%202.05143%208.27564%202.65%207.88135L2.65143%207.87992L11.0943%202.35135C11.1037%202.34493%2011.1132%202.33874%2011.1229%202.33278ZM2%2018.9671C2%2018.1099%202.81714%2017.6971%203.42857%2017.6971H20.5714C21.1829%2017.6971%2022%2018.1099%2022%2018.9685V20.6356C22%2021.4928%2021.1829%2021.9056%2020.5714%2021.9056H3.42857C2.81714%2021.9056%202%2021.4928%202%2020.6342V18.9671Z'%20fill='%23FFC56D'/%3e%3c/svg%3e"
+                            alt="銀行icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">富邦銀行</p>
+                        <p class="ms-auto line-height-sm fw-medium">
+                          $ 100,000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="add-item">
+                    <a
+                      class="d-block py-3 px-5"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M16.6919%2010.4771V17.6971H20.4976V10.4756L20.4433%2010.4771H16.6919Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M10.0972%2010.4771V17.6971H13.9029V10.4771H10.0972Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M3.50244%2010.4756V17.6971H7.30816V10.4771H3.55673L3.50244%2010.4756Z'%20fill='%23FF840A'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.1229%202.33278C11.3937%202.17358%2011.7027%202.09119%2012.0169%202.09446C12.331%202.09773%2012.6383%202.18655%2012.9057%202.35135L21.35%207.87992C21.95%208.27564%2022.1314%208.95706%2021.9%209.53849C21.6771%2010.0985%2021.1143%2010.4771%2020.4429%2010.4771H3.55714C2.88571%2010.4771%202.32286%2010.0985%202.1%209.53849C1.86857%208.95706%202.05143%208.27564%202.65%207.88135L2.65143%207.87992L11.0943%202.35135C11.1037%202.34493%2011.1132%202.33874%2011.1229%202.33278ZM2%2018.9671C2%2018.1099%202.81714%2017.6971%203.42857%2017.6971H20.5714C21.1829%2017.6971%2022%2018.1099%2022%2018.9685V20.6356C22%2021.4928%2021.1829%2021.9056%2020.5714%2021.9056H3.42857C2.81714%2021.9056%202%2021.4928%202%2020.6342V18.9671Z'%20fill='%23FFC56D'/%3e%3c/svg%3e"
+                            alt="銀行icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">玉山銀行</p>
+                        <p class="ms-auto line-height-sm fw-medium">
+                          $ 100,000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="d-flex align-items-center py-3">
+                <svg
+                  width="44"
+                  height="44"
+                  viewBox="0 0 44 44"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="me-4"
+                >
+                  <circle
+                    cx="22"
+                    cy="22"
+                    r="21"
+                    stroke="#B0B0B0"
+                    stroke-width="1"
+                    stroke-dasharray="4 4"
+                  />
+                  <foreignObject x="0" y="0" width="44" height="44">
+                    <div
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      "
+                    >
+                      <i
+                        data-lucide="plus"
+                        class="icon-16 text-neutral-600"
+                      ></i>
+                    </div>
+                  </foreignObject>
+                </svg>
+                新增帳戶
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-bottom pt-3">
+        <ul class="nav justify-content-center pb-4">
+          <li class="nav-item item-home">
+            <a class="nav-link p-0 text-center" href="index.html">
+              <span class="Icon-home"></span
+              ><span class="d-block body-2 home">首頁</span></a
+            >
+          </li>
+          <li class="nav-item item-plan">
+            <a
+              class="nav-link p-0 text-center active current-page"
+              href="plan-save-detail.html"
+            >
+              <span class="Icon-plan"></span
+              ><span class="d-block body-2 plan">計畫</span></a
+            >
+          </li>
+          <li class="nav-item item-State">
+            <a class="nav-link p-0" href="log-add.html">
+              <img
+                class="d-block"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQISURBVHgB5ZtPTttAFMY/T+i/TRXEAQonAE7QIHVPd12SFiJV6oLkBIQTNCwqVaWIdMeSHqAqnIBwAtJ9q2RRCdomcb83sfOHOInt2E5s/ySTCXaivDffzLyZN2MgZBpvsYq/yGEJ6+iwDF4msjB0uY+JOv/XZKnOq8b313iA2vJH/T40DIRAY48GK2yjjZcjhnqnxu8Qh3xZ/owLBExgDmgUWau/UeQP3QnAaGcM1DMGym2Fy6CUMbMDeoYD+7yyiAI6QhTBZlWd1REzOYBSF8MPEJXh97EU8fQTneH7K3ygO7YWTlnMYREQRWSw5UcNCh7Rtd7CFRbFeMHUFXJlKdITnhTQ2EWFn9jHYnPI0aLs9mHXDqDxVT69gzhgsnM8wWs3j7pyQKNAyZvYQLyoUQmb0x6a2gfomo+f8cIGf/vptIcmOoCdSjk2snfCQJ42vJ/8yBisHnXih2NEic2h4nTD0QHWOC9D3XwCnOBpMmrcdIoTnJtAG9+RHOOFrBW4jTDiAPb4eR1YJI+cU6A01AS09KX2k+kAoUklrC1X9bqDZlgBrcTWvk2WfcFQJNtTQApq32ZIBX0FtDm5idj4Ry+K+oqYIRX0FVDATdQOyB6b+rVZCGVlbjxcf+RcYU2KWgF6DS/50u/DJTttM+wmEOdw1z/b8qfrgHhOdmbD5Io1Ubr3RwodwGZw+w7PFP6l0HiLuzvkFD2xjrRiYEP6gNQqgKyKA1aRXugAM1HTXm/QdhVaHi8O0HaDEZGJgJC4/smrcFfRbs9K+POtgqDwnBmaP4HVlyZQBXhlbpOhAZTemZFWaLuytqWkE9oufUAd6aWedgfUVLuDa6SXmso8DH7nVWxo4VrpdFE6R4IaV4br9pLYOdKGiZq82JHgV6QNhWr3hegdmGlqBrIsfoxLKS71/mloj5QRIbdnkSdFbMp2oZ8YyeuMyQ2SlRYfRZTexpZ0gPK2Nxu0cmXBzTMXFSrdNl64nx0+AhI8N5Dabw1vqx1ygKigAxwiuZQHa19w3iO0p7fI5JAkBhKigzivCLX0LsvkNAWTtrDjc7rl6ACRSaKaghqVfv/WGFa6++qSMCqUGfQcjbs5dTHu1y6qKq7pcxebpt1tlt7TmybTuVlakC/qmP6PpUSO1LwL4wXXeYGVE+QR8VzBJxW3ZwUET4kRevWQo0MJizhEylBnoMjfWPLyMX+HpvLMJ2YYLC1OXvFCYpdxQ90kZkrJ/HyDfMbAwdwcIbWuJg9z05j94KSoYYnDpMk+IipHdOVekcnb4L5fPwR3dJaOaCvkQlVE94B1NQjDbcI5PF3Ac3S0IiR2mC1+6Bp9Lpe9jBUkoadlrSYiG7FsZ7g5Pl/Xq7aPcbH8AT8QIv8BmCA9hXG65mEAAAAASUVORK5CYII="
+                alt="State-Default"
+            /></a>
+          </li>
+          <li class="nav-item item-ledger">
+            <a class="nav-link p-0 text-center" href="book.html">
+              <span class="ledger-icon"></span
+              ><span class="d-block body-2 ledger">帳本</span></a
+            >
+          </li>
+          <li class="nav-item item-assets">
+            <a class="nav-link p-0 text-center" href="#">
+              <span class="assets-icon"></span
+              ><span class="d-block body-2 assets">資產</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 月曆的js -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 初始化 Lucide icon
+        lucide.createIcons();
+
+        // 取得今天日期
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, "0");
+        const dd = String(today.getDate()).padStart(2, "0");
+        const todayFormatted = `${yyyy}/${mm}/${dd}`;
+
+        // 初始化 flatpickr
+        const fp = flatpickr("#consult_datetime", {
+          dateFormat: "Y/m/d",
+          defaultDate: todayFormatted,
+          allowInput: false,
+          disableMobile: true,
+          clickOpens: false, // ❌ 禁止點 input 自動打開
+        });
+
+        // 移除 Flatpickr 插入的 icon
+        const autoIcon = document.querySelector(
+          ".flatpickr-input ~ .flatpickr-icon, .flatpickr-calendar-button"
+        );
+        if (autoIcon) autoIcon.remove();
+
+        // 點擊 input 或 icon 開關日曆
+        const toggleCalendar = (e) => {
+          e.preventDefault(); // 防止 input focus
+          if (fp.isOpen) {
+            fp.close();
+          } else {
+            fp.open();
+          }
+        };
+
+        // 綁定事件
+        const inputEl = document.querySelector("#consult_datetime");
+        const iconEls = document.querySelectorAll(".calendar_icon");
+
+        inputEl.addEventListener("mousedown", toggleCalendar); // 用 mousedown 防止 focus
+        inputEl.addEventListener("focus", (e) => e.target.blur()); // 強制 blur，避免鍵盤彈出
+        iconEls.forEach((el) => el.addEventListener("click", toggleCalendar));
+      });
+      const inputEl = document.querySelector("#consult_datetime");
+
+      inputEl.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        inputEl.classList.add("is-active");
+        setTimeout(() => inputEl.classList.remove("is-active"), 200); // 點擊後0.2秒移除
+        toggleCalendar(e);
+      });
+    </script>
+    <!-- 月曆的js -->
+
+    <!--計算機-->
+    <script>
+      // ======= 新計算機展開/收合 + 遮罩 =======
+      const calculator = document.getElementById("calculatorContainer");
+
+      // 如果沒有遮罩就建立一個
+      let backdrop = document.getElementById("calcBackdrop");
+      if (!backdrop) {
+        backdrop = document.createElement("div");
+        backdrop.id = "calcBackdrop";
+        backdrop.className = "calc-backdrop";
+        document.body.appendChild(backdrop);
+      }
+
+      document.querySelectorAll(".open-calculator-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          calculator.classList.add("active"); // 滑出
+          calculator.querySelector(".calculator-full").classList.add("active"); // 顯示內容
+          backdrop.classList.add("active"); // 顯示遮罩
+        });
+      });
+
+      // 點擊遮罩關閉計算機
+      backdrop.addEventListener("click", closeCalculator);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const calculator = document.getElementById("calculatorContainer");
+        // 等 DOM 載入後移除 display:none
+        calculator.style.display = "block";
+      });
+      // ======= 計算機功能 =======
+      let currentInput = ""; // 儲存完整算式
+      let displayValue = ""; // 儲存顯示在 input 的值
+      let memoryValue = 0;
+
+      function inputNumber(num) {
+        currentInput += num;
+        displayValue += num;
+        updateDisplay();
+      }
+
+      function inputOperator(op) {
+        if (currentInput === "" && op !== "-") return;
+        currentInput += op;
+        displayValue = "";
+      }
+
+      function clearAll() {
+        currentInput = "";
+        displayValue = "";
+        updateDisplay();
+      }
+
+      function backspace() {
+        if (displayValue !== "") {
+          displayValue = displayValue.slice(0, -1);
+          currentInput = currentInput.slice(0, -1);
+        }
+        updateDisplay();
+      }
+
+      function calculate() {
+        try {
+          const expression = currentInput.replace(/×/g, "*").replace(/÷/g, "/");
+          const result = eval(expression);
+          currentInput = result.toString();
+          displayValue = result.toString();
+          updateDisplay();
+        } catch (err) {
+          displayValue = "錯誤";
+          updateDisplay();
+          currentInput = "";
+          displayValue = "";
+        }
+      }
+
+      function memory() {
+        try {
+          const expression = currentInput.replace(/×/g, "*").replace(/÷/g, "/");
+          const result = eval(expression);
+          currentInput = result.toString();
+          displayValue = result.toString();
+          updateDisplay();
+        } catch (err) {
+          displayValue = "錯誤";
+          updateDisplay();
+          currentInput = "";
+          displayValue = "";
+        }
+      }
+
+      // ======= 更新顯示區 (只顯示數字，加上 $) =======
+      function updateDisplay() {
+        const display = document.querySelector(".calc-input");
+        if (display) {
+          display.value = displayValue === "" ? "$0" : "$" + displayValue;
+        }
+        console.log("算式:", currentInput, "顯示:", displayValue);
+      }
+
+      // ======= 點擊外面關閉計算機 =======
+      document.addEventListener("click", (e) => {
+        const btn = document.querySelector(".open-calculator-btn");
+        const offcanvas = document.getElementById("offcanvasRight");
+
+        if (
+          !calculator.contains(e.target) &&
+          !(btn && btn.contains(e.target)) &&
+          !(offcanvas && offcanvas.contains(e.target))
+        ) {
+          closeCalculator();
+        }
+      });
+
+      // ======= 關閉計算機 =======
+      function closeCalculator() {
+        calculator.classList.remove("active");
+        calculator.querySelector(".calculator-full").classList.remove("active");
+        backdrop.classList.remove("active");
+      }
+
+      // 初始顯示 $0
+      updateDisplay();
+    </script>
+    <!--測欄展開-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sideOffcanvasEl = document.querySelector(".side .offcanvas");
+        if (!sideOffcanvasEl) return;
+
+        const bsSideOffcanvas = new bootstrap.Offcanvas(sideOffcanvasEl);
+
+        // 展開動畫 + scrollTop
+        sideOffcanvasEl.addEventListener("show.bs.offcanvas", () => {
+          sideOffcanvasEl.classList.add("show");
+
+          const mobileFrame = document.querySelector(".mobile-frame");
+          if (mobileFrame) mobileFrame.scrollTop = 0;
+
+          if (!document.querySelector(".offcanvas-backdrop")) {
+            const backdrop = document.createElement("div");
+            backdrop.className = "offcanvas-backdrop fade show";
+            document.body.appendChild(backdrop);
+          }
+        });
+
+        // 關閉動畫
+        sideOffcanvasEl.addEventListener("hide.bs.offcanvas", (e) => {
+          e.preventDefault();
+
+          sideOffcanvasEl.classList.add("hiding");
+          sideOffcanvasEl.classList.remove("show");
+
+          const backdrop = document.querySelector(".offcanvas-backdrop");
+          if (backdrop) backdrop.classList.remove("show");
+
+          setTimeout(() => {
+            sideOffcanvasEl.classList.remove("hiding");
+            sideOffcanvasEl.style.display = "none";
+            sideOffcanvasEl.setAttribute("aria-hidden", "true");
+
+            if (backdrop) backdrop.remove();
+            bsSideOffcanvas._isShown = false;
+          }, 350);
+        });
+      });
+    </script>
+
+    <!--測欄展開項目active-->
+    <script>
+      document.querySelectorAll(".offcanvas-body a").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault(); // 避免 href="#" 讓頁面跳動
+          document
+            .querySelectorAll(".offcanvas-body a")
+            .forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname; // 取得目前網址路徑
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          // 如果 a 的 href 包含目前的 path，就加 active
+          if (currentPath.includes(link.getAttribute("href"))) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
