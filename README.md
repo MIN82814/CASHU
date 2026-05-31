@@ -42,12 +42,12 @@
 
 ---
 
-## 🛠️ 前端技術棧 (Tech Stack)
+## 🛠️ 技術棧 
 
-| 技術 / 工具 |
-| :---------- |
 
 ## HTML｜SCSS｜Bootstrap 5｜Git / GitHub（Gitflow、PR協作）｜SVG
+| :---------- |
+---
 
 ## 💡旻旻前端技術實作負責項目
 
