@@ -102,11 +102,9 @@ CASHU/
 - **Node.js**: v18.0.0 或更高版本
 
 ### 安裝與本地開發
-1. **複製與安裝**
+1. **安裝**
 
 ```bash
-   git clone [https://github.com/MIN82814/CASHU.git](https://github.com/MIN82814/CASHU.git)
-   cd CASHU
    npm install
 ````
 
@@ -116,13 +114,11 @@ CASHU/
    npm run dev
 ```
 
-伺服器啟動後將自動開啟：`http://localhost:5173/CASHU/pages/index.html`
 
-3. **生產環境構建與預覽**
+3. **生產環境構建**
 
 ```bash
-   npm run build     # 編譯優化版本至 dist/ 資料夾
-   npm run preview   # 本地預覽生產環境編譯結果
+   npm run build     
 ```
 
 ---
