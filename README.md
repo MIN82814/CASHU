@@ -5,7 +5,7 @@
 
 > **與 AAPD UI 設計團隊跨領域深度合作的現代化行動端網頁應用。**
 > 本專案架構基於 **Vite** 構建，整合 **EJS 模板引擎**、**Bootstrap 5** 與 **SCSS 模塊化管理**。
-> 與 AAPD UI 設計團隊協作開發行動端記帳 App，參與 UI 設計溝通、Figma 設計稿交接與前端介面實作，專案著重行動端操作體驗、介面一致性與元件化開發流程。
+> 參與 UI 設計溝通、Figma 設計稿交接與前端介面實作，專案著重行動端操作體驗、介面一致性與元件化開發流程。
 
 ---
 
@@ -26,7 +26,7 @@
 
 | 成員 | 共用 / 架構 | 🪙 記帳業務主線 | 🎯 存錢計畫主線 |
 | :--- | :--- | :--- | :--- |
-| **旻旻** | 搭建全站 SCSS 模塊化架構<br>封裝 `EJS` 共用模板<br>建置 `_navbar-bottom` 與 `_mobile-frame` 等全站核心視覺組件 | **獨立負責完整互動與頁面切換：**<br>· `log-add.html` (日誌新增)<br>· `select_account.html` (帳戶選擇)<br>· `category-page.html` (消費分類)<br>· `add-result.html` (新增結果) | **獨立負責完整互動與頁面切換：**<br>· `plan-save.html` (計畫主頁)<br>· `plan-save-detail.html` (詳情追蹤)<br>· `plan-save-success.html` (成功回饋) |
+| **旻旻** | <br> · 搭建全站 SCSS 模塊化架構<br> · 封裝 `EJS` 共用模板<br> · 建置 `_navbar-bottom` 與 `_mobile-frame` 等全站核心視覺組件 | **獨立負責完整互動與頁面切換：**<br>· `log-add.html` (日誌新增)<br>· `select_account.html` (帳戶選擇)<br>· `category-page.html` (消費分類)<br>· `add-result.html` (新增結果) | **獨立負責完整互動與頁面切換：**<br>· `plan-save.html` (計畫主頁)<br>· `plan-save-detail.html` (詳情追蹤)<br>· `plan-save-success.html` (成功回饋) |
 | **Kate** | 負責處理全站 `LOADING` 狀態之 GIF 動態載入與流暢視覺顯現切換 | · `index.html` (預設首頁入口與核心動態引導) | **獨立負責遊戲化任務與成就模組：**<br>· `Homepage_misson.html` (主頁儲蓄任務)<br>· `complete.html` (任務完成狀態)<br>· `mission-complete.html` (挑戰達成)<br>· `personal-accomplishment.html` (個人成就頁) |
 | **Sherry** | 基本環境建置 | · `book.html` (歷史帳簿與圖書數據核心頁面) | - |
 | **AAPD 設計團隊** | 負責行動端產品定位、全站 UI 設計稿（Figma） | 記帳流與計算機介面 UX 流程規劃、視覺規範定義 | 遊戲化儲蓄任務、打卡挑戰與成就勳章視覺設計 |
