@@ -43,10 +43,8 @@
 ---
 
 ## 🛠️ 技術棧 
-
-
-## HTML｜SCSS｜Bootstrap 5｜Git / GitHub（Gitflow、PR協作）｜SVG
-| :---------- |
+ HTML｜SCSS｜Bootstrap 5｜Git / GitHub（Gitflow、PR協作）｜SVG
+ 
 ---
 
 ## 💡旻旻前端技術實作負責項目
